@@ -13,17 +13,31 @@ LaserSensor::LaserSensor(){
 	laserSensorBack  = 0;
 	laserSensorLeft  = 0;
 	laserSensorRight = 0;
+	sensorGain = 0;
+	sensorMaximumRange = 0;
 }
 
-void LaserSensor::initializeDriver(int numberOfSensors){
+void LaserSensor::initializeDriver(int numberOfSensors,int gain, int maxRange){
 	std::cout<<"=====================================\n";
 	std::cout<<"Initializing Laser Sensors..........!\n";
 	std::cout<<".....................................\n";
 	LaserSensor::setSensorType();
+	LaserSensor::setGain(gain);
+	LaserSensor::setMaximumRange(maxRange);
 	LaserSensor::setSensorDeviceID(numberOfSensors);
 	LaserSensor::setNumberOfSensors(numberOfSensors);
 	LaserSensor::getSensorDeviceID();
 	std::cout<<".....................................\n";
+}
+
+void LaserSensor::setMaximumRange(int maxRange){
+	sensorMaximumRange = maxRange;
+	std::cout<<"Sensor Maximum range : "<<sensorMaximumRange<<std::endl;
+}
+
+void LaserSensor::setGain(int gain){
+	sensorGain = gain;
+	std::cout<<"Sensor gain : "<<sensorGain<<std::endl;
 }
 
 std::vector<int> LaserSensor::getSensorData(){
@@ -48,10 +62,6 @@ void LaserSensor::parseSensorData(std::vector<int> data){
 	std::cout<<"Sensor Left value = "<<laserSensorLeft<<std::endl;
 	laserSensorRight = data.at(3);
 	std::cout<<"Sensor Right value = "<<laserSensorRight<<std::endl;
-}
-
-double LaserSensor::ConvertCentimetersToInches(double cm){
-	return (cm/2.54);
 }
 
 void LaserSensor::setSensorType(){

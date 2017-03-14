@@ -32,9 +32,9 @@ int main(){
 	std::cout<<"Turning on Obstacle Avoidance Module.!\n";
 	std::cout<<".....................................!\n";
 	UltrasonicSensor ultrSensor;
-	ultrSensor.initializeDriver(4);
+	ultrSensor.initializeDriver(4,10,100);
 	LaserSensor lsrSensor;
-	lsrSensor.initializeDriver(4);
+	lsrSensor.initializeDriver(4,15,150);
 	std::cout<<"Reading Ultrasonic Sensor raw data...!\n";
 	ultrSensor.generateSensorData();
 	ultrSensor.getTimeStamp();

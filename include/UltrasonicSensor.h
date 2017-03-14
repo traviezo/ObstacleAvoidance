@@ -17,11 +17,10 @@ public:
 	UltrasonicSensor();
 	virtual void setMaximumRange(int maxRange);
 	virtual void setGain(int gain);
-	virtual void initializeDriver(int numberOfSensors);
+	virtual void initializeDriver(int numberOfSensors, int gain, int maxRange);
 	virtual std::vector<int> getSensorData();
 	virtual void generateSensorData();
 	virtual void parseSensorData(std::vector<int> data);
-	virtual double ConvertCentimetersToInches(double cm);
 	virtual void setSensorType();
 	virtual std::string getSensorType();
 	virtual void setNumberOfSensors(int number);

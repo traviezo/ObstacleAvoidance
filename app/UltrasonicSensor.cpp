@@ -17,11 +17,13 @@ UltrasonicSensor::UltrasonicSensor(){
 	ultrasonicSensorRight = 0;
 }
 
-void UltrasonicSensor::initializeDriver(int numberOfSensors){
+void UltrasonicSensor::initializeDriver(int numberOfSensors,int gain, int maxRange){
 	std::cout<<"=====================================\n";
 	std::cout<<"Initializing Ultrasonic Sensors.....!\n";
 	std::cout<<".....................................\n";
 	UltrasonicSensor::setSensorType();
+	UltrasonicSensor::setGain(gain);
+	UltrasonicSensor::setMaximumRange(maxRange);
 	UltrasonicSensor::setSensorDeviceID(numberOfSensors);
 	UltrasonicSensor::setNumberOfSensors(numberOfSensors);
 	UltrasonicSensor::getSensorDeviceID();
@@ -30,10 +32,12 @@ void UltrasonicSensor::initializeDriver(int numberOfSensors){
 
 void UltrasonicSensor::setMaximumRange(int maxRange){
 	sensorMaximumRange = maxRange;
+	std::cout<<"Sensor Maximum range : "<<sensorMaximumRange<<std::endl;
 }
 
 void UltrasonicSensor::setGain(int gain){
 	sensorGain = gain;
+	std::cout<<"Sensor gain : "<<sensorGain<<std::endl;
 }
 
 std::vector<int> UltrasonicSensor::getSensorData(){
@@ -58,10 +62,6 @@ void UltrasonicSensor::parseSensorData(std::vector<int> data){
 	std::cout<<"Sensor Left value = "<<ultrasonicSensorLeft<<std::endl;
 	ultrasonicSensorRight = data.at(3);
 	std::cout<<"Sensor Right value = "<<ultrasonicSensorRight<<std::endl;
-}
-
-double UltrasonicSensor::ConvertCentimetersToInches(double cm){
-	return (cm/2.54);
 }
 
 void UltrasonicSensor::setSensorType(){

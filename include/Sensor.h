@@ -19,10 +19,9 @@
 class Sensor{
 
 public:
-	virtual void initializeDriver(int numberOfSensors) = 0;
+	virtual void initializeDriver(int numberOfSensors,int gain,int maxRange) = 0;
 	virtual std::vector<int> getSensorData() = 0;
 	virtual void parseSensorData(std::vector<int> data) = 0;
-	virtual double ConvertCentimetersToInches(double cm) = 0;
 	virtual void setSensorType() = 0;
 	virtual std::string getSensorType() = 0;
 	virtual void setNumberOfSensors(int number) = 0;
