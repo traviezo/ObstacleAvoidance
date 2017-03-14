@@ -1,4 +1,0 @@
-/home/christian/ObstacleAvoidance/build/vendor/googletest/googletest/CMakeFiles/gtest.dir
-/home/christian/ObstacleAvoidance/build/app/CMakeFiles/shell-app.dir
-/home/christian/ObstacleAvoidance/build/vendor/googletest/googletest/CMakeFiles/gtest_main.dir
-/home/christian/ObstacleAvoidance/build/test/CMakeFiles/cpp-test.dir

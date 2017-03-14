@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++11 -Wall -Wextra -Wpedantic   CMakeFiles/shell-app.dir/main.cpp.o CMakeFiles/shell-app.dir/LaserSensor.cpp.o CMakeFiles/shell-app.dir/SensorFusion.cpp.o CMakeFiles/shell-app.dir/UltrasonicSensor.cpp.o CMakeFiles/shell-app.dir/ObstacleAvoidanceModule.cpp.o CMakeFiles/shell-app.dir/MotorController.cpp.o  -o shell-app -rdynamic 
