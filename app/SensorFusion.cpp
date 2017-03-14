@@ -7,6 +7,13 @@
 
 #include "SensorFusion.h"
 
+SensorFusion::SensorFusion(){
+	fusedSensorFwd = 0;
+	fusedSensorBack = 0;
+	fusedSensorLeft = 0;
+	fusedSensorRight = 0;
+}
+
 void SensorFusion::fuseSensorData(std::vector<int> udata,std::vector<int> ldata){
 	fusedSensorFwd = (udata.at(0)+ldata.at(0))/2;
 	

@@ -7,6 +7,13 @@
 
 #include "ObstacleAvoidanceModule.h"
 
+ObstacleAvoidanceModule::ObstacleAvoidanceModule(){
+	frontObstacle = false;
+	backObstacle = false;
+	leftObstacle = false;
+	rightObstacle = false;
+}
+
 void ObstacleAvoidance::detectObstacle(int front,int back,int left,int right){
 	if(front<=25){
 		std::cout<<"Object Detected in forward path\n";

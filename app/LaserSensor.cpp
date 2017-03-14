@@ -7,6 +7,14 @@
 
 #include "LaserSensor.h"
 
+LaserSensor::LaserSensor(){
+	numberOfSensors  = 0;
+	laserSensorFront = 0;
+	laserSensorBack  = 0;
+	laserSensorLeft  = 0;
+	laserSensorRight = 0;
+}
+
 void LaserSensor::initializeDriver(int numberOfSensors){
 	std::cout<<"=====================================\n";
 	std::cout<<"Initializing Laser Sensors..........!\n";

@@ -14,15 +14,16 @@
 class ObstacleAvoidance {
 
 public:
+	ObstacleAvoidance();
 	void detectObstacle(int front,int back,int left,int right);
 	
 	void turnOnOffAvoidance(int &frontSpeed, int &backSpeed,int &leftSpeed, int &rightSpeed);
 
 private:
-	bool frontObstacle = false;
-	bool backObstacle = false;
-	bool leftObstacle = false;
-	bool rightObstacle = false;
+	bool frontObstacle;
+	bool backObstacle;
+	bool leftObstacle;
+	bool rightObstacle;
 	
 };
 

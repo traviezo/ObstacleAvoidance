@@ -13,6 +13,7 @@
 
 class SensorFusion {
 public:
+	SensorFusion();
 	void fuseSensorData(std::vector<int>,std::vector<int>);
 	int getFusedSensorFwd();
 	int getFusedSensorBack();

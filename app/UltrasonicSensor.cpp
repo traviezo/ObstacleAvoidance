@@ -7,6 +7,16 @@
 
 #include "UltrasonicSensor.h"
 
+UltrasonicSensor::UltrasonicSensor(){
+	sensorGain = 0;
+	sensorMaximumRange = 0;
+	numberOfSensors = 0;
+	ultrasonicSensorFront = 0;
+	ultrasonicSensorBack = 0;
+	ultrasonicSensorLeft = 0;
+	ultrasonicSensorRight = 0;
+}
+
 void UltrasonicSensor::initializeDriver(int numberOfSensors){
 	std::cout<<"=====================================\n";
 	std::cout<<"Initializing Ultrasonic Sensors.....!\n";

@@ -13,6 +13,7 @@
 class LaserSensor: public Sensor {
 
 public:
+	LaserSensor();
 	virtual void initializeDriver(int numberOfSensors);
 	virtual std::vector<int> getSensorData();
 	virtual void generateSensorData();

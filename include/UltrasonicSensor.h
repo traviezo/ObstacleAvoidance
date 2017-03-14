@@ -14,7 +14,7 @@
 class UltrasonicSensor: public Sensor {
 
 public:
-
+	UltrasonicSensor();
 	virtual void setMaximumRange(int maxRange);
 	virtual void setGain(int gain);
 	virtual void initializeDriver(int numberOfSensors);
