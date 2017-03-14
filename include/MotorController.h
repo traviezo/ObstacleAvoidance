@@ -13,12 +13,13 @@
 
 class MotorController {
 public:
+	MotorController();
 	void initializeMotorController();
 	void moveForward(int);
 	void moveBackwards(int);
 	void moveLeft(int);
 	void moveRight(int);
-
+	
 private:
 	int fwdSpeed;
 	int backSpeed;

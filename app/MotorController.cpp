@@ -7,6 +7,13 @@
 
 #include "MotorController.h"
 
+MotorController::MotorController(){
+	fwdSpeed  = 0;
+	backSpeed = 0;
+	leftSpeed = 0;
+	rightSpeed= 0;
+}
+
 void MotorController::initializeMotorController(){
 	std::cout<<"=====================================\n";
 	std::cout<<"Initializing Motor Controller.......!\n";
