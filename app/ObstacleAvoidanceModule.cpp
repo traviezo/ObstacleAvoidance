@@ -7,7 +7,7 @@
 
 #include "ObstacleAvoidanceModule.h"
 
-ObstacleAvoidanceModule::ObstacleAvoidanceModule(){
+ObstacleAvoidance::ObstacleAvoidance(){
 	frontObstacle = false;
 	backObstacle = false;
 	leftObstacle = false;
