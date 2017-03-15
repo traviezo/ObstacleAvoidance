@@ -1,37 +1,69 @@
+/* 
+ * LaserSensor.h
+ *
+ * Copyright 2017 Christian Ramos
+ *
+ *  Created on: Mar 7, 2017
+ *      Author: christian
+ */
+
 #include <gtest/gtest.h>
 #include "LaserSensor.h"
 #include "UltrasonicSensor.h"
-#include "ObstacleAvoidanceModule.h"
 #include "SensorFusion.h"
+#include "ObstacleAvoidanceModule.h"
 
-TEST(PidConstructor, InvalidNegativeGainInputs) {
-//  EXPECT_THROW(PidController(-22.0, -0.1, -5.7,1.0), std::domain_error);
+TEST(Ultrasonic_Initialize, InvalidNegativeArguments) {
+  UltrasonicSensor ultrSensor;
+  EXPECT_THROW(ultrSensor.initDriver(-4,-15, 100), std::domain_error);
 }
 
-//TEST(PidConstructor, InvalidNegativeTimeArgument) {
-//  EXPECT_THROW(PidController(18.0, 7.3, 1.5,-1.0), std::domain_error);
-//}
+TEST(Ultrasonic_range, InvalidNegativeRangeInput) {
+  UltrasonicSensor ultrSensor;
+  EXPECT_THROW(ultrSensor.setMaximumRange(-22), std::domain_error);
+}
 
-//TEST(PidConstructor, InvalidZeroTimeArgument) {
-//  EXPECT_THROW(PidController(34.0, 3.6, 2.8,0), std::runtime_error);
-//}
+TEST(Ultrasonic_gain, InvalidNegativeGainInput) {
+  UltrasonicSensor ultrSensor;
+  EXPECT_THROW(ultrSensor.setGain(-10), std::domain_error);
+}
 
-//TEST(PidController, Compute_CurrentAndTargetSetPointAreTheSame) {
-  /* No Change needed if the current and computed velocity are the same */
-//  PidController controller = PidController(1.0, 0.0, 0.0,1.0);
-//  EXPECT_EQ(0, controller.computePID(100, 100));
-//}
+TEST(Ultrasonic_numberOfSensors, InvalidNegativeArguments) {
+  UltrasonicSensor ultrSensor;
+  EXPECT_THROW(ultrSensor.setNumberOfSensors(-4), std::domain_error);
+}
 
-//TEST(PidController, Compute_PositivePowerWhenVelecityBelowSetPoint) {
-  /* If measured velocity is less than set point, need more power to equalize
-   * given only proportional gain is set */
-//  PidController controller = PidController(1.0, 0.0, 0.0,1.0);
-//  EXPECT_GT(controller.computePID(100, 50), 0);
-//}
+TEST(Ultrasonic_deviceIDs, InvalidNegativeArguments) {
+  UltrasonicSensor ultrSensor;
+  EXPECT_THROW(ultrSensor.setSensorDeviceID(-6), std::domain_error);
+}
 
-//TEST(PidController, Compute_NegativeOutputWhenVelecityAboveSetPoint) {
-  /* If measured velocity is greater than set point, need less power to equalize
-   * given only proportional gain is set */
-//  PidController controller = PidController(1.0, 0.0, 0.0,1.0);
-//  EXPECT_LT(controller.computePID(50, 100), 0);
-//}
+TEST(Laser_Initialize, InvalidNegativeArguments) {
+  LaserSensor lsrSensor;
+  EXPECT_THROW(lsrSensor.initDriver(-4,-10, -50), std::domain_error);
+}
+
+TEST(Laser_range, InvalidNegativeRangeInput) {
+  LaserSensor lsrSensor;
+  EXPECT_THROW(lsrSensor.setMaximumRange(-54), std::domain_error);
+}
+
+TEST(Laser_gain, InvalidNegativeGainInput) {
+  LaserSensor lsrSensor;
+  EXPECT_THROW(lsrSensor.setGain(-15), std::domain_error);
+}
+
+TEST(Laser_numberOfSensors, InvalidNegativeArguments) {
+  LaserSensor lsrSensor;
+  EXPECT_THROW(lsrSensor.setNumberOfSensors(-4), std::domain_error);
+}
+
+TEST(Laser_deviceIDs, InvalidNegativeArguments) {
+  LaserSensor lsrSensor;
+  EXPECT_THROW(lsrSensor.setSensorDeviceID(-5), std::domain_error);
+}
+
+TEST(ObstacleAvoidance_detect, InvalidNegativeArguments) {
+  ObstacleAvoidance obsAvd;
+  EXPECT_THROW(obsAvd.detectObstacle(-34,-20,-45,56), std::domain_error);
+}
