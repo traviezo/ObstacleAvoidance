@@ -28,7 +28,7 @@ Obstacle Avoidance Module: Its objective is to access the data from the Sensor F
 
 Motor Controller Module (dummy model): Although not really part of the Obstacle Avoidance Module, it is needed in order to simulate an interface to the motor controller. This module simulates the motion of an omnidirectional wheeled vehicle which does not not need to turn its wheels in order to move in any direction. 
 
-##How to build the project
+## How to build the project
 
 The following steps are taken in order to build the project:
 1. Clone it from repository: git clone <repository>
@@ -40,7 +40,7 @@ The following steps are taken in order to build the project:
 7. Type make <enter>
 Project should compile and return errors if any or successful completion.
 
-##How to run the Demo program
+## How to run the Demo program
 
 Once the project has successfuly built, an executable will be created inside the app folder with the following name: shell-app.
 In order to run the demo please do the following:
@@ -48,7 +48,7 @@ In order to run the demo please do the following:
 2. Run the executable inside the app folder: ./app/shell-app <enter>
 This should run the demo program which will show the initialization of each module. It will then generate sensor data and use the obstacle detection module to detect objects and override the vehicle speed accordingly.
 
-##How to run the Test program
+## How to run the Test program
 
 Once the project has successfuly built, an executable will be created inside the test folder with the following name: cpp-test.
 In order to run the test script please do the following:
@@ -56,7 +56,7 @@ In order to run the test script please do the following:
 2. Run the executable inside the test folder: ./test/cpp-test <enter>
 The test program should run 11 tests successfully.
 
-##How to generate Doxygen Documentation
+## How to generate Doxygen Documentation
 
 In order to generate doxygen documentation do the following:
 1. Install doxygen: sudo apt-get install doxygen <enter>
@@ -67,7 +67,7 @@ OUTPUT = (directory where latex and html files will be stored)
 Optional : PROJECT_NAME, PROJECT_NUMBER, PROJECT_BRIEF
 4. Run the doxygen config file: doxygen my_proj.conf <enter>
 
-##Results
+## Results
 
 Results for compilation, cppcheck,cpplint, demo and test snapshot results are stored in the resuts folder.
 
