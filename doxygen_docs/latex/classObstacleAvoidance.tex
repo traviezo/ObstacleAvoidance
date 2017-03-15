@@ -1,0 +1,155 @@
+\hypertarget{classObstacleAvoidance}{\section{Obstacle\-Avoidance Class Reference}
+\label{classObstacleAvoidance}\index{Obstacle\-Avoidance@{Obstacle\-Avoidance}}
+}
+
+
+{\ttfamily \#include $<$Obstacle\-Avoidance\-Module.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classObstacleAvoidance_adff25e3149ac860f48af277913c6e51e}{Obstacle\-Avoidance} ()
+\begin{DoxyCompactList}\small\item\em class constructor \end{DoxyCompactList}\item 
+void \hyperlink{classObstacleAvoidance_a05040b1d9096fa315e439a0a9cd3a0e3}{detect\-Obstacle} (int front, int back, int left, int right)
+\begin{DoxyCompactList}\small\item\em Detects obstacles. \end{DoxyCompactList}\item 
+void \hyperlink{classObstacleAvoidance_a646828a87a384074b80df0a0ff1320ec}{trn\-On\-Off\-Avoid} (int \&front\-Spd, int \&back\-Spd, int \&left\-Spd, int \&right\-Spd)
+\begin{DoxyCompactList}\small\item\em Overrides speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classObstacleAvoidance_adff25e3149ac860f48af277913c6e51e}{\index{Obstacle\-Avoidance@{Obstacle\-Avoidance}!Obstacle\-Avoidance@{Obstacle\-Avoidance}}
+\index{Obstacle\-Avoidance@{Obstacle\-Avoidance}!ObstacleAvoidance@{Obstacle\-Avoidance}}
+\subsubsection[{Obstacle\-Avoidance}]{\setlength{\rightskip}{0pt plus 5cm}Obstacle\-Avoidance\-::\-Obstacle\-Avoidance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObstacleAvoidance_adff25e3149ac860f48af277913c6e51e}
+
+
+class constructor 
+
+
+\begin{DoxyCode}
+10                                      \{
+11   frontObstacle = \textcolor{keyword}{false};
+12   backObstacle = \textcolor{keyword}{false};
+13   leftObstacle = \textcolor{keyword}{false};
+14   rightObstacle = \textcolor{keyword}{false};
+15 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classObstacleAvoidance_a05040b1d9096fa315e439a0a9cd3a0e3}{\index{Obstacle\-Avoidance@{Obstacle\-Avoidance}!detect\-Obstacle@{detect\-Obstacle}}
+\index{detect\-Obstacle@{detect\-Obstacle}!ObstacleAvoidance@{Obstacle\-Avoidance}}
+\subsubsection[{detect\-Obstacle}]{\setlength{\rightskip}{0pt plus 5cm}void Obstacle\-Avoidance\-::detect\-Obstacle (
+\begin{DoxyParamCaption}
+\item[{int}]{front, }
+\item[{int}]{back, }
+\item[{int}]{left, }
+\item[{int}]{right}
+\end{DoxyParamCaption}
+)}}\label{classObstacleAvoidance_a05040b1d9096fa315e439a0a9cd3a0e3}
+
+
+Detects obstacles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & front sensor reading \\
+\hline
+{\em back} & back sensor reading \\
+\hline
+{\em left} & left sensor reading \\
+\hline
+{\em right} & right sensor reading \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+17                                                                             \{
+18   \textcolor{keywordflow}{if} (std::isless(front,0) || std::isless(back,0) || std::isless(left,0) || std::isless(right,0))
+19     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative arguments are invalid"});
+20   \textcolor{keywordflow}{if}(front <= 25) \{
+21     std::cout << \textcolor{stringliteral}{"Object Detected in forward path\(\backslash\)n"};
+22     frontObstacle = \textcolor{keyword}{true};
+23   \}
+24   \textcolor{keywordflow}{if}(back <= 25) \{
+25     std::cout << \textcolor{stringliteral}{"Object Detected in backward path\(\backslash\)n"};
+26     backObstacle = \textcolor{keyword}{true};
+27   \}
+28   \textcolor{keywordflow}{if}(left <= 25) \{
+29     std::cout << \textcolor{stringliteral}{"Object Detected in left path\(\backslash\)n"};
+30     leftObstacle = \textcolor{keyword}{true};
+31   \}
+32   \textcolor{keywordflow}{if}(right <= 25) \{
+33     std::cout << \textcolor{stringliteral}{"Object Detected in right path\(\backslash\)n"};
+34     rightObstacle = \textcolor{keyword}{true};
+35   \}
+36 \}
+\end{DoxyCode}
+\hypertarget{classObstacleAvoidance_a646828a87a384074b80df0a0ff1320ec}{\index{Obstacle\-Avoidance@{Obstacle\-Avoidance}!trn\-On\-Off\-Avoid@{trn\-On\-Off\-Avoid}}
+\index{trn\-On\-Off\-Avoid@{trn\-On\-Off\-Avoid}!ObstacleAvoidance@{Obstacle\-Avoidance}}
+\subsubsection[{trn\-On\-Off\-Avoid}]{\setlength{\rightskip}{0pt plus 5cm}void Obstacle\-Avoidance\-::trn\-On\-Off\-Avoid (
+\begin{DoxyParamCaption}
+\item[{int \&}]{front\-Spd, }
+\item[{int \&}]{back\-Spd, }
+\item[{int \&}]{left\-Spd, }
+\item[{int \&}]{right\-Spd}
+\end{DoxyParamCaption}
+)}}\label{classObstacleAvoidance_a646828a87a384074b80df0a0ff1320ec}
+
+
+Overrides speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em front} & front speed \\
+\hline
+{\em back} & back speed \\
+\hline
+{\em left} & left speed \\
+\hline
+{\em right} & right speed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+39                                                                                              \{
+40   \textcolor{keywordflow}{if} (std::isless(frontSpd,0) || std::isless(backSpd,0) || std::isless(leftSpd,0) || std::isless(rightSpd,0
+      ))
+41     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative arguments are invalid"});
+42   \textcolor{keywordflow}{if}(frontObstacle) \{
+43     frontSpd = 0;
+44     std::cout << \textcolor{stringliteral}{"Overriding Forward speed to 0........!\(\backslash\)n"};
+45     frontObstacle = \textcolor{keyword}{false};      
+46   \}
+47   \textcolor{keywordflow}{if}(backObstacle) \{
+48     backSpd = 0;
+49     std::cout << \textcolor{stringliteral}{"Overriding Backward speed to 0.......!\(\backslash\)n"};
+50     backObstacle = \textcolor{keyword}{false};       
+51     \}
+52   \textcolor{keywordflow}{if}(leftObstacle) \{
+53     leftSpd = 0;
+54     std::cout << \textcolor{stringliteral}{"Overriding Left speed to 0...........!\(\backslash\)n"};
+55     leftObstacle = \textcolor{keyword}{false};
+56   \}
+57   \textcolor{keywordflow}{if}(rightObstacle) \{
+58     rightSpd = 0;
+59     std::cout << \textcolor{stringliteral}{"Overriding Right speed to 0..........!\(\backslash\)n"};
+60     leftObstacle = \textcolor{keyword}{false};   
+61   \}
+62 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Obstacle\-Avoidance/include/\hyperlink{ObstacleAvoidanceModule_8h}{Obstacle\-Avoidance\-Module.\-h}\item 
+Obstacle\-Avoidance/app/\hyperlink{ObstacleAvoidanceModule_8cpp}{Obstacle\-Avoidance\-Module.\-cpp}\end{DoxyCompactItemize}

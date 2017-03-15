@@ -1,0 +1,13 @@
+<map id="ObstacleAvoidance/include/Sensor.h" name="ObstacleAvoidance/include/Sensor.h">
+<area shape="rect" id="node2" href="$LaserSensor_8h.html" title="Simulates a laser sensor driver and generates laser sensor data. " alt="" coords="249,97,428,138"/>
+<area shape="rect" id="node11" href="$UltrasonicSensor_8h.html" title="Simulates an ultrasonic sensor driver and generates laser sensor data. " alt="" coords="609,97,788,138"/>
+<area shape="rect" id="node3" href="$LaserSensor_8cpp.html" title="ObstacleAvoidance/app\l/LaserSensor.cpp" alt="" coords="5,187,164,229"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="ObstacleAvoidance/app\l/main.cpp" alt="" coords="573,459,732,501"/>
+<area shape="rect" id="node5" href="$SensorFusion_8h.html" title="Module that combines the data received from ultrasonic and laser sensors into a single averaged data ..." alt="" coords="491,187,671,229"/>
+<area shape="rect" id="node6" href="$SensorFusion_8cpp.html" title="ObstacleAvoidance/app\l/SensorFusion.cpp" alt="" coords="683,278,841,319"/>
+<area shape="rect" id="node7" href="$MotorController_8h.html" title="Simulates an omnidirectional vehicle Motor Controller driver that moves around at 1 to 2 mi/h..." alt="" coords="427,278,607,319"/>
+<area shape="rect" id="node9" href="$ObstacleAvoidanceModule_8h.html" title="Module that detects and avoids obstacles in the path of omnidirectional robotic vehicle. " alt="" coords="240,369,432,410"/>
+<area shape="rect" id="node8" href="$MotorController_8cpp.html" title="ObstacleAvoidance/app\l/MotorController.cpp" alt="" coords="456,369,615,410"/>
+<area shape="rect" id="node10" href="$ObstacleAvoidanceModule_8cpp.html" title="ObstacleAvoidance/app\l/ObstacleAvoidanceModule.cpp" alt="" coords="233,459,439,501"/>
+<area shape="rect" id="node12" href="$UltrasonicSensor_8cpp.html" title="ObstacleAvoidance/app\l/UltrasonicSensor.cpp" alt="" coords="917,187,1076,229"/>
+</map>

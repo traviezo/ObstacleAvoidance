@@ -1,0 +1,5 @@
+<map id="ObstacleAvoidance/include/SensorFusion.h" name="ObstacleAvoidance/include/SensorFusion.h">
+<area shape="rect" id="node2" href="$UltrasonicSensor_8h.html" title="Simulates an ultrasonic sensor driver and generates laser sensor data. " alt="" coords="60,96,193,123"/>
+<area shape="rect" id="node13" href="$LaserSensor_8h.html" title="Simulates a laser sensor driver and generates laser sensor data. " alt="" coords="217,96,324,123"/>
+<area shape="rect" id="node5" href="$Sensor_8h.html" title="Pure virtual sensor class from which laser and ultrasonic modules are derived. " alt="" coords="260,171,333,197"/>
+</map>

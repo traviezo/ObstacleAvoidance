@@ -1,0 +1,7 @@
+<map id="ObstacleAvoidance/include/MotorController.h" name="ObstacleAvoidance/include/MotorController.h">
+<area shape="rect" id="node2" href="$SensorFusion_8h.html" title="Module that combines the data received from ultrasonic and laser sensors into a single averaged data ..." alt="" coords="242,171,355,197"/>
+<area shape="rect" id="node15" href="$ObstacleAvoidanceModule_8h.html" title="Module that detects and avoids obstacles in the path of omnidirectional robotic vehicle. " alt="" coords="271,96,459,123"/>
+<area shape="rect" id="node3" href="$UltrasonicSensor_8h.html" title="Simulates an ultrasonic sensor driver and generates laser sensor data. " alt="" coords="163,245,296,272"/>
+<area shape="rect" id="node14" href="$LaserSensor_8h.html" title="Simulates a laser sensor driver and generates laser sensor data. " alt="" coords="320,245,427,272"/>
+<area shape="rect" id="node6" href="$Sensor_8h.html" title="Pure virtual sensor class from which laser and ultrasonic modules are derived. " alt="" coords="260,320,333,347"/>
+</map>

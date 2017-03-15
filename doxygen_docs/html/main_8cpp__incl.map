@@ -1,0 +1,8 @@
+<map id="ObstacleAvoidance/app/main.cpp" name="ObstacleAvoidance/app/main.cpp">
+<area shape="rect" id="node2" href="$UltrasonicSensor_8h.html" title="Simulates an ultrasonic sensor driver and generates laser sensor data. " alt="" coords="204,320,337,347"/>
+<area shape="rect" id="node13" href="$LaserSensor_8h.html" title="Simulates a laser sensor driver and generates laser sensor data. " alt="" coords="361,320,468,347"/>
+<area shape="rect" id="node14" href="$SensorFusion_8h.html" title="Module that combines the data received from ultrasonic and laser sensors into a single averaged data ..." alt="" coords="214,245,327,272"/>
+<area shape="rect" id="node15" href="$ObstacleAvoidanceModule_8h.html" title="Module that detects and avoids obstacles in the path of omnidirectional robotic vehicle. " alt="" coords="93,96,280,123"/>
+<area shape="rect" id="node16" href="$MotorController_8h.html" title="Simulates an omnidirectional vehicle Motor Controller driver that moves around at 1 to 2 mi/h..." alt="" coords="27,171,149,197"/>
+<area shape="rect" id="node5" href="$Sensor_8h.html" title="Pure virtual sensor class from which laser and ultrasonic modules are derived. " alt="" coords="301,395,375,421"/>
+</map>

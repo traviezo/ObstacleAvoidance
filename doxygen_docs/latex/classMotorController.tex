@@ -1,0 +1,153 @@
+\hypertarget{classMotorController}{\section{Motor\-Controller Class Reference}
+\label{classMotorController}\index{Motor\-Controller@{Motor\-Controller}}
+}
+
+
+{\ttfamily \#include $<$Motor\-Controller.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMotorController_a1c32db157ba4b6dba1f2d6bc8891f16d}{Motor\-Controller} ()
+\begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classMotorController_a56ae5e4c44399b8afe94eb721514dd5e}{initialize\-Motor\-Controller} ()
+\begin{DoxyCompactList}\small\item\em Initializes motor controller. \end{DoxyCompactList}\item 
+void \hyperlink{classMotorController_ab0dffd70556dbab55aa990673e6dc5f8}{move\-Forward} (int)
+\begin{DoxyCompactList}\small\item\em Moves forward. \end{DoxyCompactList}\item 
+void \hyperlink{classMotorController_a3ad21d7cff7b0c3c6700b2755b1df2d2}{move\-Backwards} (int)
+\begin{DoxyCompactList}\small\item\em Moves backwards. \end{DoxyCompactList}\item 
+void \hyperlink{classMotorController_a4c3beafe5316cd08fd44845e20ec7151}{move\-Left} (int)
+\begin{DoxyCompactList}\small\item\em Moves left. \end{DoxyCompactList}\item 
+void \hyperlink{classMotorController_aa1586060f2ee0f66e83d30c897a1cdb4}{move\-Right} (int)
+\begin{DoxyCompactList}\small\item\em Moves right. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMotorController_a1c32db157ba4b6dba1f2d6bc8891f16d}{\index{Motor\-Controller@{Motor\-Controller}!Motor\-Controller@{Motor\-Controller}}
+\index{Motor\-Controller@{Motor\-Controller}!MotorController@{Motor\-Controller}}
+\subsubsection[{Motor\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}Motor\-Controller\-::\-Motor\-Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMotorController_a1c32db157ba4b6dba1f2d6bc8891f16d}
+
+
+Class constructor. 
+
+
+\begin{DoxyCode}
+10                                  \{
+11   fwdSpeed  = 0;
+12   backSpeed = 0;
+13   leftSpeed = 0;
+14   rightSpeed = 0;
+15 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMotorController_a56ae5e4c44399b8afe94eb721514dd5e}{\index{Motor\-Controller@{Motor\-Controller}!initialize\-Motor\-Controller@{initialize\-Motor\-Controller}}
+\index{initialize\-Motor\-Controller@{initialize\-Motor\-Controller}!MotorController@{Motor\-Controller}}
+\subsubsection[{initialize\-Motor\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}void Motor\-Controller\-::initialize\-Motor\-Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMotorController_a56ae5e4c44399b8afe94eb721514dd5e}
+
+
+Initializes motor controller. 
+
+
+\begin{DoxyCode}
+17                                                 \{
+18   std::cout <<\textcolor{stringliteral}{"=====================================\(\backslash\)n"};
+19   std::cout <<\textcolor{stringliteral}{"Initializing Motor Controller.......!\(\backslash\)n"};
+20   std::cout <<\textcolor{stringliteral}{".....................................\(\backslash\)n"};
+21   fwdSpeed = 0;
+22   std::cout <<\textcolor{stringliteral}{"Forward Speed = "} << fwdSpeed << \textcolor{stringliteral}{" mi/h\(\backslash\)n"};
+23   backSpeed = 0;
+24   std::cout <<\textcolor{stringliteral}{"Backward Speed = "} << backSpeed << \textcolor{stringliteral}{" mi/h\(\backslash\)n"};
+25   leftSpeed = 0;
+26   std::cout <<\textcolor{stringliteral}{"Left Speed = "}<< leftSpeed <<\textcolor{stringliteral}{" mi/h\(\backslash\)n"};
+27   rightSpeed = 0;
+28   std::cout <<\textcolor{stringliteral}{"Right Speed = "}<< rightSpeed <<\textcolor{stringliteral}{" mi/h\(\backslash\)n"};
+29 \}
+\end{DoxyCode}
+\hypertarget{classMotorController_a3ad21d7cff7b0c3c6700b2755b1df2d2}{\index{Motor\-Controller@{Motor\-Controller}!move\-Backwards@{move\-Backwards}}
+\index{move\-Backwards@{move\-Backwards}!MotorController@{Motor\-Controller}}
+\subsubsection[{move\-Backwards}]{\setlength{\rightskip}{0pt plus 5cm}void Motor\-Controller\-::move\-Backwards (
+\begin{DoxyParamCaption}
+\item[{int}]{speed}
+\end{DoxyParamCaption}
+)}}\label{classMotorController_a3ad21d7cff7b0c3c6700b2755b1df2d2}
+
+
+Moves backwards. 
+
+
+\begin{DoxyCode}
+36                                              \{
+37   backSpeed = speed;
+38   std::cout <<\textcolor{stringliteral}{"Moving backwards at "}<< backSpeed <<\textcolor{stringliteral}{" mi/h\(\backslash\)n"};
+39 \}
+\end{DoxyCode}
+\hypertarget{classMotorController_ab0dffd70556dbab55aa990673e6dc5f8}{\index{Motor\-Controller@{Motor\-Controller}!move\-Forward@{move\-Forward}}
+\index{move\-Forward@{move\-Forward}!MotorController@{Motor\-Controller}}
+\subsubsection[{move\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}void Motor\-Controller\-::move\-Forward (
+\begin{DoxyParamCaption}
+\item[{int}]{speed}
+\end{DoxyParamCaption}
+)}}\label{classMotorController_ab0dffd70556dbab55aa990673e6dc5f8}
+
+
+Moves forward. 
+
+
+\begin{DoxyCode}
+31                                            \{
+32   fwdSpeed = speed;
+33   std::cout <<\textcolor{stringliteral}{"Moving forward at "}<< fwdSpeed <<\textcolor{stringliteral}{" mi/h\(\backslash\)n"};
+34 \}
+\end{DoxyCode}
+\hypertarget{classMotorController_a4c3beafe5316cd08fd44845e20ec7151}{\index{Motor\-Controller@{Motor\-Controller}!move\-Left@{move\-Left}}
+\index{move\-Left@{move\-Left}!MotorController@{Motor\-Controller}}
+\subsubsection[{move\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void Motor\-Controller\-::move\-Left (
+\begin{DoxyParamCaption}
+\item[{int}]{speed}
+\end{DoxyParamCaption}
+)}}\label{classMotorController_a4c3beafe5316cd08fd44845e20ec7151}
+
+
+Moves left. 
+
+
+\begin{DoxyCode}
+41                                         \{
+42   leftSpeed = speed;
+43   std::cout <<\textcolor{stringliteral}{"Moving left at "}<< leftSpeed <<\textcolor{stringliteral}{" mi/h\(\backslash\)n"};
+44 \}
+\end{DoxyCode}
+\hypertarget{classMotorController_aa1586060f2ee0f66e83d30c897a1cdb4}{\index{Motor\-Controller@{Motor\-Controller}!move\-Right@{move\-Right}}
+\index{move\-Right@{move\-Right}!MotorController@{Motor\-Controller}}
+\subsubsection[{move\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void Motor\-Controller\-::move\-Right (
+\begin{DoxyParamCaption}
+\item[{int}]{speed}
+\end{DoxyParamCaption}
+)}}\label{classMotorController_aa1586060f2ee0f66e83d30c897a1cdb4}
+
+
+Moves right. 
+
+
+\begin{DoxyCode}
+46                                          \{
+47   rightSpeed = speed;
+48   std::cout <<\textcolor{stringliteral}{"Moving right at "}<< rightSpeed <<\textcolor{stringliteral}{" mi/h\(\backslash\)n"};
+49 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Obstacle\-Avoidance/include/\hyperlink{MotorController_8h}{Motor\-Controller.\-h}\item 
+Obstacle\-Avoidance/app/\hyperlink{MotorController_8cpp}{Motor\-Controller.\-cpp}\end{DoxyCompactItemize}

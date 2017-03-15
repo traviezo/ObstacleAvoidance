@@ -1,0 +1,480 @@
+\hypertarget{classUltrasonicSensor}{\section{Ultrasonic\-Sensor Class Reference}
+\label{classUltrasonicSensor}\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}}
+}
+
+
+{\ttfamily \#include $<$Ultrasonic\-Sensor.\-h$>$}
+
+
+
+Inheritance diagram for Ultrasonic\-Sensor\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classUltrasonicSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ultrasonic\-Sensor\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classUltrasonicSensor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUltrasonicSensor_afc21cb39ba75dfd008e1e82c82d2e61f}{Ultrasonic\-Sensor} ()
+\begin{DoxyCompactList}\small\item\em Class Constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classUltrasonicSensor_aa825f00c93ee05ca0edbeb3a99f485b6}{set\-Maximum\-Range} (int max\-Range)
+\begin{DoxyCompactList}\small\item\em Sets the maximum range of the Ultrasonic \hyperlink{classSensor}{Sensor}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classUltrasonicSensor_a20010d13123da9fbf3efcdeb59d9f6a4}{set\-Gain} (int gain)
+\begin{DoxyCompactList}\small\item\em Sets the gain of the Ultrasonic \hyperlink{classSensor}{Sensor}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classUltrasonicSensor_a7e35552a5e39f38202c2a8650a90f43c}{init\-Driver} (int number\-Of\-Sensors, int gain, int max\-Range)
+\begin{DoxyCompactList}\small\item\em Initiates Ultrasonic \hyperlink{classSensor}{Sensor} Driver. \end{DoxyCompactList}\item 
+virtual std\-::vector$<$ int $>$ \hyperlink{classUltrasonicSensor_a4dab101931d788a031fe44db24d0c305}{get\-Sensor\-Data} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the Ultrasonic \hyperlink{classSensor}{Sensor} data. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classUltrasonicSensor_a5587d9432d42a82d9f6f853b0aecddd3}{generate\-Sensor\-Data} ()
+\begin{DoxyCompactList}\small\item\em Generates the Ultrasonic \hyperlink{classSensor}{Sensor} data. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classUltrasonicSensor_ac24cc66755a3201fc667e43d7d0a62c5}{parse\-Sensor\-Data} (std\-::vector$<$ int $>$ data)
+\begin{DoxyCompactList}\small\item\em Parses the Ultrasonic \hyperlink{classSensor}{Sensor} data vector into individual variables. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classUltrasonicSensor_a0f3de9fee2a0ff99f5163b778ecfad4d}{set\-Sensor\-Type} ()
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classSensor}{Sensor} type as Ultrasonic. \end{DoxyCompactList}\item 
+virtual std\-::string \hyperlink{classUltrasonicSensor_ac354871be24914dfbfad3f07af061403}{get\-Sensor\-Type} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the \hyperlink{classSensor}{Sensor} type\-: Ultrasonic. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classUltrasonicSensor_adbd980ad9471ccf285dede0c4a4c4def}{set\-Number\-Of\-Sensors} (int number)
+\begin{DoxyCompactList}\small\item\em Configures the number of ultrasonic sensors to be used (4) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classUltrasonicSensor_a9c92da2614f15035c069c7ae9ae2899d}{set\-Sensor\-Device\-I\-D} (int number\-Of\-Devices)
+\begin{DoxyCompactList}\small\item\em Sets the device I\-Ds of the ultrasonic sensors. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classUltrasonicSensor_a1676043861eb34cb61e27002212b90cc}{get\-Sensor\-Device\-I\-D} ()
+\begin{DoxyCompactList}\small\item\em Prints to the screen the device I\-Ds of the ultrasonic sensors. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classUltrasonicSensor_ac101ee85a4d58f5bf075e18ece5776da}{get\-Time\-Stamp} ()
+\begin{DoxyCompactList}\small\item\em Prints to the screen the ultrasonic sensor readings time stamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classUltrasonicSensor_afc21cb39ba75dfd008e1e82c82d2e61f}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!Ultrasonic\-Sensor@{Ultrasonic\-Sensor}}
+\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{Ultrasonic\-Sensor}]{\setlength{\rightskip}{0pt plus 5cm}Ultrasonic\-Sensor\-::\-Ultrasonic\-Sensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classUltrasonicSensor_afc21cb39ba75dfd008e1e82c82d2e61f}
+
+
+Class Constructor. 
+
+
+\begin{DoxyCode}
+10                                    \{
+11   sensorGain = 0;
+12   sensorMaximumRange = 0;
+13   numberOfSensors = 0;
+14   ultrasonicSensorFront = 0;
+15   ultrasonicSensorBack = 0;
+16   ultrasonicSensorLeft = 0;
+17   ultrasonicSensorRight = 0;
+18 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classUltrasonicSensor_a5587d9432d42a82d9f6f853b0aecddd3}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!generate\-Sensor\-Data@{generate\-Sensor\-Data}}
+\index{generate\-Sensor\-Data@{generate\-Sensor\-Data}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{generate\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Ultrasonic\-Sensor\-::generate\-Sensor\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_a5587d9432d42a82d9f6f853b0aecddd3}
+
+
+Generates the Ultrasonic \hyperlink{classSensor}{Sensor} data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a1cabdc10d3319abeaa8db56724fa36e5}{Sensor}.
+
+
+\begin{DoxyCode}
+53                                           \{
+54   std::random\_device rnd;
+55   std::mt19937 gen(rnd());
+56   std::uniform\_int\_distribution<> dist(1,100);
+57   \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0;i<numberOfSensors;i++)
+58     sensorData.push\_back(dist(gen));
+59   \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} n:sensorData)
+60     std::cout << \hyperlink{classUltrasonicSensor_ac354871be24914dfbfad3f07af061403}{UltrasonicSensor::getSensorType}() <<\textcolor{stringliteral}{" Sensor = "} << n << 
+      std::endl;
+61 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_a4dab101931d788a031fe44db24d0c305}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!get\-Sensor\-Data@{get\-Sensor\-Data}}
+\index{get\-Sensor\-Data@{get\-Sensor\-Data}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{get\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ int $>$ Ultrasonic\-Sensor\-::get\-Sensor\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_a4dab101931d788a031fe44db24d0c305}
+
+
+Retrieves the Ultrasonic \hyperlink{classSensor}{Sensor} data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$int$>$ vector containing 4 sensor readings 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a795dda4f99ae87b9d66c3c5a07722d1b}{Sensor}.
+
+
+\begin{DoxyCode}
+49                                                \{
+50   \textcolor{keywordflow}{return} sensorData;
+51 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_a1676043861eb34cb61e27002212b90cc}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!get\-Sensor\-Device\-I\-D@{get\-Sensor\-Device\-I\-D}}
+\index{get\-Sensor\-Device\-I\-D@{get\-Sensor\-Device\-I\-D}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{get\-Sensor\-Device\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void Ultrasonic\-Sensor\-::get\-Sensor\-Device\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_a1676043861eb34cb61e27002212b90cc}
+
+
+Prints to the screen the device I\-Ds of the ultrasonic sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_af7ff987e1f0f6b7c4acf2910212fde95}{Sensor}.
+
+
+\begin{DoxyCode}
+95                                          \{
+96   std::cout <<\textcolor{stringliteral}{"Sensor Front device ID : "} << deviceID.at(0) << std::endl;
+97   std::cout <<\textcolor{stringliteral}{"Sensor Back  device ID : "} << deviceID.at(1) << std::endl;
+98   std::cout <<\textcolor{stringliteral}{"Sensor Left  device ID : "} << deviceID.at(2) << std::endl;
+99   std::cout <<\textcolor{stringliteral}{"Sensor Right device ID : "} << deviceID.at(3) << std::endl;
+100 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_ac354871be24914dfbfad3f07af061403}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!get\-Sensor\-Type@{get\-Sensor\-Type}}
+\index{get\-Sensor\-Type@{get\-Sensor\-Type}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{get\-Sensor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Ultrasonic\-Sensor\-::get\-Sensor\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_ac354871be24914dfbfad3f07af061403}
+
+
+Retrieves the \hyperlink{classSensor}{Sensor} type\-: Ultrasonic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Contains the sensor type (ultrasonic) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a6cf36c37e69761711982fed5d14aeb4e}{Sensor}.
+
+
+\begin{DoxyCode}
+78                                           \{
+79   \textcolor{keywordflow}{return} sensorType;
+80 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_ac101ee85a4d58f5bf075e18ece5776da}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!get\-Time\-Stamp@{get\-Time\-Stamp}}
+\index{get\-Time\-Stamp@{get\-Time\-Stamp}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{get\-Time\-Stamp}]{\setlength{\rightskip}{0pt plus 5cm}void Ultrasonic\-Sensor\-::get\-Time\-Stamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_ac101ee85a4d58f5bf075e18ece5776da}
+
+
+Prints to the screen the ultrasonic sensor readings time stamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a8c6ceb519eb8720a0e9cedd84624a7ff}{Sensor}.
+
+
+\begin{DoxyCode}
+102                                     \{
+103   \textcolor{keyword}{auto} now = std::chrono::system\_clock::now();
+104   \textcolor{keyword}{auto} nowC = std::chrono::system\_clock::to\_time\_t(now);
+105   std::cout << \textcolor{stringliteral}{"Time stamp = "} << std::ctime(&nowC) << std::endl;
+106 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_a7e35552a5e39f38202c2a8650a90f43c}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!init\-Driver@{init\-Driver}}
+\index{init\-Driver@{init\-Driver}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{init\-Driver}]{\setlength{\rightskip}{0pt plus 5cm}void Ultrasonic\-Sensor\-::init\-Driver (
+\begin{DoxyParamCaption}
+\item[{int}]{number\-Of\-Sensors, }
+\item[{int}]{gain, }
+\item[{int}]{max\-Range}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_a7e35552a5e39f38202c2a8650a90f43c}
+
+
+Initiates Ultrasonic \hyperlink{classSensor}{Sensor} Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\-Of\-Sensors} & sets the number of sensors in the module \\
+\hline
+{\em gain} & sets the gain of the module \\
+\hline
+{\em max\-Range} & sets the maximum range of the module \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything
+\end{DoxyReturn}
+This method executes all initialization functions for the module. 
+
+Implements \hyperlink{classSensor_a12851eb9413ee61c2d694b4168e365fd}{Sensor}.
+
+
+\begin{DoxyCode}
+20                                                                             \{
+21   \textcolor{keywordflow}{if} (std::isless(numberOfSensors,0) || std::isless(gain,0) || std::isless(maxRange,0))
+22     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative arguments are invalid"});
+23   std::cout <<\textcolor{stringliteral}{"=====================================\(\backslash\)n"};
+24   std::cout <<\textcolor{stringliteral}{"Initializing Ultrasonic Sensors.....!\(\backslash\)n"};
+25   std::cout <<\textcolor{stringliteral}{".....................................\(\backslash\)n"};
+26   \hyperlink{classUltrasonicSensor_a0f3de9fee2a0ff99f5163b778ecfad4d}{UltrasonicSensor::setSensorType}();
+27   \hyperlink{classUltrasonicSensor_a20010d13123da9fbf3efcdeb59d9f6a4}{UltrasonicSensor::setGain}(gain);
+28   \hyperlink{classUltrasonicSensor_aa825f00c93ee05ca0edbeb3a99f485b6}{UltrasonicSensor::setMaximumRange}(maxRange);
+29   \hyperlink{classUltrasonicSensor_a9c92da2614f15035c069c7ae9ae2899d}{UltrasonicSensor::setSensorDeviceID}(numberOfSensors);
+30   \hyperlink{classUltrasonicSensor_adbd980ad9471ccf285dede0c4a4c4def}{UltrasonicSensor::setNumberOfSensors}(numberOfSensors);
+31   \hyperlink{classUltrasonicSensor_a1676043861eb34cb61e27002212b90cc}{UltrasonicSensor::getSensorDeviceID}();
+32   std::cout <<\textcolor{stringliteral}{".....................................\(\backslash\)n"};
+33 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_ac24cc66755a3201fc667e43d7d0a62c5}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!parse\-Sensor\-Data@{parse\-Sensor\-Data}}
+\index{parse\-Sensor\-Data@{parse\-Sensor\-Data}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{parse\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Ultrasonic\-Sensor\-::parse\-Sensor\-Data (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ int $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_ac24cc66755a3201fc667e43d7d0a62c5}
+
+
+Parses the Ultrasonic \hyperlink{classSensor}{Sensor} data vector into individual variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & vector containing 4 integer readings \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a32f0d1754f66bdb26bbece93e05b9a44}{Sensor}.
+
+
+\begin{DoxyCode}
+62                                                           \{
+63   ultrasonicSensorFront = data.at(0);
+64   std::cout <<\textcolor{stringliteral}{"Sensor Front value = "} << ultrasonicSensorFront << std::endl;
+65   ultrasonicSensorBack  = data.at(1);
+66   std::cout <<\textcolor{stringliteral}{"Sensor Back value = "} << ultrasonicSensorBack << std::endl;  
+67   ultrasonicSensorLeft  = data.at(2);
+68   std::cout <<\textcolor{stringliteral}{"Sensor Left value = "} << ultrasonicSensorLeft << std::endl;
+69   ultrasonicSensorRight = data.at(3);
+70   std::cout <<\textcolor{stringliteral}{"Sensor Right value = "} << ultrasonicSensorRight << std::endl;
+71 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_a20010d13123da9fbf3efcdeb59d9f6a4}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!set\-Gain@{set\-Gain}}
+\index{set\-Gain@{set\-Gain}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{set\-Gain}]{\setlength{\rightskip}{0pt plus 5cm}void Ultrasonic\-Sensor\-::set\-Gain (
+\begin{DoxyParamCaption}
+\item[{int}]{gain}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_a20010d13123da9fbf3efcdeb59d9f6a4}
+
+
+Sets the gain of the Ultrasonic \hyperlink{classSensor}{Sensor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gain} & sensor gain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+42                                        \{
+43   \textcolor{keywordflow}{if} (std::isless(gain,0))
+44     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative gain not allowed"});
+45   sensorGain = gain;
+46   std::cout <<\textcolor{stringliteral}{"Sensor gain : "} << sensorGain << std::endl;
+47 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_aa825f00c93ee05ca0edbeb3a99f485b6}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!set\-Maximum\-Range@{set\-Maximum\-Range}}
+\index{set\-Maximum\-Range@{set\-Maximum\-Range}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{set\-Maximum\-Range}]{\setlength{\rightskip}{0pt plus 5cm}void Ultrasonic\-Sensor\-::set\-Maximum\-Range (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Range}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_aa825f00c93ee05ca0edbeb3a99f485b6}
+
+
+Sets the maximum range of the Ultrasonic \hyperlink{classSensor}{Sensor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\-Range} & maximum range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+35                                                    \{
+36   \textcolor{keywordflow}{if} (std::isless(maxRange,0))
+37     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative range not allowed"});
+38   sensorMaximumRange = maxRange;
+39   std::cout <<\textcolor{stringliteral}{"Sensor Maximum range : "} << sensorMaximumRange << std::endl;
+40 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_adbd980ad9471ccf285dede0c4a4c4def}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!set\-Number\-Of\-Sensors@{set\-Number\-Of\-Sensors}}
+\index{set\-Number\-Of\-Sensors@{set\-Number\-Of\-Sensors}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{set\-Number\-Of\-Sensors}]{\setlength{\rightskip}{0pt plus 5cm}void Ultrasonic\-Sensor\-::set\-Number\-Of\-Sensors (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_adbd980ad9471ccf285dede0c4a4c4def}
+
+
+Configures the number of ultrasonic sensors to be used (4) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & number of sensors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a5372c229e1bf77d70d48506af8abd351}{Sensor}.
+
+
+\begin{DoxyCode}
+82                                                     \{
+83   \textcolor{keywordflow}{if} (std::isless(number,0))
+84     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative arguments are invalid"});
+85   numberOfSensors = number;
+86 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_a9c92da2614f15035c069c7ae9ae2899d}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!set\-Sensor\-Device\-I\-D@{set\-Sensor\-Device\-I\-D}}
+\index{set\-Sensor\-Device\-I\-D@{set\-Sensor\-Device\-I\-D}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{set\-Sensor\-Device\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void Ultrasonic\-Sensor\-::set\-Sensor\-Device\-I\-D (
+\begin{DoxyParamCaption}
+\item[{int}]{number\-Of\-Devices}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_a9c92da2614f15035c069c7ae9ae2899d}
+
+
+Sets the device I\-Ds of the ultrasonic sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\-Of\-Devices} & number of devices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a3a7ad3cdc0e9a5ef6f5ce684c7a0c59a}{Sensor}.
+
+
+\begin{DoxyCode}
+88                                                             \{
+89   \textcolor{keywordflow}{if} (std::isless(numberOfDevices,0))
+90     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative arguments are invalid"});
+91   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i =1; i <= numberOfDevices; i++)
+92     deviceID.push\_back(i*10);
+93 \}
+\end{DoxyCode}
+\hypertarget{classUltrasonicSensor_a0f3de9fee2a0ff99f5163b778ecfad4d}{\index{Ultrasonic\-Sensor@{Ultrasonic\-Sensor}!set\-Sensor\-Type@{set\-Sensor\-Type}}
+\index{set\-Sensor\-Type@{set\-Sensor\-Type}!UltrasonicSensor@{Ultrasonic\-Sensor}}
+\subsubsection[{set\-Sensor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Ultrasonic\-Sensor\-::set\-Sensor\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classUltrasonicSensor_a0f3de9fee2a0ff99f5163b778ecfad4d}
+
+
+Sets the \hyperlink{classSensor}{Sensor} type as Ultrasonic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a53daf1760d09355a8d3846addc53bd6e}{Sensor}.
+
+
+\begin{DoxyCode}
+73                                      \{
+74   sensorType = \textcolor{stringliteral}{"Ultrasonic"};
+75   std::cout <<\textcolor{stringliteral}{"Sensor Type : "} << \hyperlink{classUltrasonicSensor_ac354871be24914dfbfad3f07af061403}{UltrasonicSensor::getSensorType}() << 
+      std::endl;
+76 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Obstacle\-Avoidance/include/\hyperlink{UltrasonicSensor_8h}{Ultrasonic\-Sensor.\-h}\item 
+Obstacle\-Avoidance/app/\hyperlink{UltrasonicSensor_8cpp}{Ultrasonic\-Sensor.\-cpp}\end{DoxyCompactItemize}

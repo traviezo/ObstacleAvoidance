@@ -1,0 +1,4 @@
+<map id="ObstacleAvoidance/app/LaserSensor.cpp" name="ObstacleAvoidance/app/LaserSensor.cpp">
+<area shape="rect" id="node2" href="$LaserSensor_8h.html" title="Simulates a laser sensor driver and generates laser sensor data. " alt="" coords="143,96,249,123"/>
+<area shape="rect" id="node5" href="$Sensor_8h.html" title="Pure virtual sensor class from which laser and ultrasonic modules are derived. " alt="" coords="260,171,333,197"/>
+</map>

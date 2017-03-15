@@ -1,0 +1,160 @@
+\hypertarget{classSensor}{\section{Sensor Class Reference}
+\label{classSensor}\index{Sensor@{Sensor}}
+}
+
+
+{\ttfamily \#include $<$Sensor.\-h$>$}
+
+
+
+Inheritance diagram for Sensor\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classSensor__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classSensor_a12851eb9413ee61c2d694b4168e365fd}{init\-Driver} (int number\-Of\-Sensors, int gain, int max\-Range)=0
+\item 
+virtual std\-::vector$<$ int $>$ \hyperlink{classSensor_a795dda4f99ae87b9d66c3c5a07722d1b}{get\-Sensor\-Data} ()=0
+\item 
+virtual void \hyperlink{classSensor_a1cabdc10d3319abeaa8db56724fa36e5}{generate\-Sensor\-Data} ()=0
+\item 
+virtual void \hyperlink{classSensor_a32f0d1754f66bdb26bbece93e05b9a44}{parse\-Sensor\-Data} (std\-::vector$<$ int $>$ data)=0
+\item 
+virtual void \hyperlink{classSensor_a53daf1760d09355a8d3846addc53bd6e}{set\-Sensor\-Type} ()=0
+\item 
+virtual std\-::string \hyperlink{classSensor_a6cf36c37e69761711982fed5d14aeb4e}{get\-Sensor\-Type} ()=0
+\item 
+virtual void \hyperlink{classSensor_a5372c229e1bf77d70d48506af8abd351}{set\-Number\-Of\-Sensors} (int number)=0
+\item 
+virtual void \hyperlink{classSensor_af7ff987e1f0f6b7c4acf2910212fde95}{get\-Sensor\-Device\-I\-D} ()=0
+\item 
+virtual void \hyperlink{classSensor_a3a7ad3cdc0e9a5ef6f5ce684c7a0c59a}{set\-Sensor\-Device\-I\-D} (int number\-Of\-Devices)=0
+\item 
+virtual void \hyperlink{classSensor_a8c6ceb519eb8720a0e9cedd84624a7ff}{get\-Time\-Stamp} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSensor_a1cabdc10d3319abeaa8db56724fa36e5}{\index{Sensor@{Sensor}!generate\-Sensor\-Data@{generate\-Sensor\-Data}}
+\index{generate\-Sensor\-Data@{generate\-Sensor\-Data}!Sensor@{Sensor}}
+\subsubsection[{generate\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sensor\-::generate\-Sensor\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSensor_a1cabdc10d3319abeaa8db56724fa36e5}
+
+
+Implemented in \hyperlink{classUltrasonicSensor_a5587d9432d42a82d9f6f853b0aecddd3}{Ultrasonic\-Sensor}, and \hyperlink{classLaserSensor_a87ed0b803f91e74752a9097c594bcb0a}{Laser\-Sensor}.
+
+\hypertarget{classSensor_a795dda4f99ae87b9d66c3c5a07722d1b}{\index{Sensor@{Sensor}!get\-Sensor\-Data@{get\-Sensor\-Data}}
+\index{get\-Sensor\-Data@{get\-Sensor\-Data}!Sensor@{Sensor}}
+\subsubsection[{get\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::vector$<$int$>$ Sensor\-::get\-Sensor\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSensor_a795dda4f99ae87b9d66c3c5a07722d1b}
+
+
+Implemented in \hyperlink{classUltrasonicSensor_a4dab101931d788a031fe44db24d0c305}{Ultrasonic\-Sensor}, and \hyperlink{classLaserSensor_a1660841aa809bc22abc607780bf832b0}{Laser\-Sensor}.
+
+\hypertarget{classSensor_af7ff987e1f0f6b7c4acf2910212fde95}{\index{Sensor@{Sensor}!get\-Sensor\-Device\-I\-D@{get\-Sensor\-Device\-I\-D}}
+\index{get\-Sensor\-Device\-I\-D@{get\-Sensor\-Device\-I\-D}!Sensor@{Sensor}}
+\subsubsection[{get\-Sensor\-Device\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sensor\-::get\-Sensor\-Device\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSensor_af7ff987e1f0f6b7c4acf2910212fde95}
+
+
+Implemented in \hyperlink{classLaserSensor_a7b1301e42da81092ef4b16fcec3ece62}{Laser\-Sensor}, and \hyperlink{classUltrasonicSensor_a1676043861eb34cb61e27002212b90cc}{Ultrasonic\-Sensor}.
+
+\hypertarget{classSensor_a6cf36c37e69761711982fed5d14aeb4e}{\index{Sensor@{Sensor}!get\-Sensor\-Type@{get\-Sensor\-Type}}
+\index{get\-Sensor\-Type@{get\-Sensor\-Type}!Sensor@{Sensor}}
+\subsubsection[{get\-Sensor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string Sensor\-::get\-Sensor\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSensor_a6cf36c37e69761711982fed5d14aeb4e}
+
+
+Implemented in \hyperlink{classLaserSensor_aa94501358ead1126fe74e8ccaa5e83cb}{Laser\-Sensor}, and \hyperlink{classUltrasonicSensor_ac354871be24914dfbfad3f07af061403}{Ultrasonic\-Sensor}.
+
+\hypertarget{classSensor_a8c6ceb519eb8720a0e9cedd84624a7ff}{\index{Sensor@{Sensor}!get\-Time\-Stamp@{get\-Time\-Stamp}}
+\index{get\-Time\-Stamp@{get\-Time\-Stamp}!Sensor@{Sensor}}
+\subsubsection[{get\-Time\-Stamp}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sensor\-::get\-Time\-Stamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSensor_a8c6ceb519eb8720a0e9cedd84624a7ff}
+
+
+Implemented in \hyperlink{classLaserSensor_a3be8d859cdab60a5e32c0855e5be928e}{Laser\-Sensor}, and \hyperlink{classUltrasonicSensor_ac101ee85a4d58f5bf075e18ece5776da}{Ultrasonic\-Sensor}.
+
+\hypertarget{classSensor_a12851eb9413ee61c2d694b4168e365fd}{\index{Sensor@{Sensor}!init\-Driver@{init\-Driver}}
+\index{init\-Driver@{init\-Driver}!Sensor@{Sensor}}
+\subsubsection[{init\-Driver}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sensor\-::init\-Driver (
+\begin{DoxyParamCaption}
+\item[{int}]{number\-Of\-Sensors, }
+\item[{int}]{gain, }
+\item[{int}]{max\-Range}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSensor_a12851eb9413ee61c2d694b4168e365fd}
+
+
+Implemented in \hyperlink{classUltrasonicSensor_a7e35552a5e39f38202c2a8650a90f43c}{Ultrasonic\-Sensor}, and \hyperlink{classLaserSensor_a1137c622e564b5706e6f36e253c2828b}{Laser\-Sensor}.
+
+\hypertarget{classSensor_a32f0d1754f66bdb26bbece93e05b9a44}{\index{Sensor@{Sensor}!parse\-Sensor\-Data@{parse\-Sensor\-Data}}
+\index{parse\-Sensor\-Data@{parse\-Sensor\-Data}!Sensor@{Sensor}}
+\subsubsection[{parse\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sensor\-::parse\-Sensor\-Data (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ int $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSensor_a32f0d1754f66bdb26bbece93e05b9a44}
+
+
+Implemented in \hyperlink{classUltrasonicSensor_ac24cc66755a3201fc667e43d7d0a62c5}{Ultrasonic\-Sensor}, and \hyperlink{classLaserSensor_aa2edc4c57398799497859ab9373e9aa5}{Laser\-Sensor}.
+
+\hypertarget{classSensor_a5372c229e1bf77d70d48506af8abd351}{\index{Sensor@{Sensor}!set\-Number\-Of\-Sensors@{set\-Number\-Of\-Sensors}}
+\index{set\-Number\-Of\-Sensors@{set\-Number\-Of\-Sensors}!Sensor@{Sensor}}
+\subsubsection[{set\-Number\-Of\-Sensors}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sensor\-::set\-Number\-Of\-Sensors (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSensor_a5372c229e1bf77d70d48506af8abd351}
+
+
+Implemented in \hyperlink{classLaserSensor_a4ce1bdb6167453f776413bcf62669562}{Laser\-Sensor}, and \hyperlink{classUltrasonicSensor_adbd980ad9471ccf285dede0c4a4c4def}{Ultrasonic\-Sensor}.
+
+\hypertarget{classSensor_a3a7ad3cdc0e9a5ef6f5ce684c7a0c59a}{\index{Sensor@{Sensor}!set\-Sensor\-Device\-I\-D@{set\-Sensor\-Device\-I\-D}}
+\index{set\-Sensor\-Device\-I\-D@{set\-Sensor\-Device\-I\-D}!Sensor@{Sensor}}
+\subsubsection[{set\-Sensor\-Device\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sensor\-::set\-Sensor\-Device\-I\-D (
+\begin{DoxyParamCaption}
+\item[{int}]{number\-Of\-Devices}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSensor_a3a7ad3cdc0e9a5ef6f5ce684c7a0c59a}
+
+
+Implemented in \hyperlink{classLaserSensor_a186eb69518339ef4ba33e8e190a39428}{Laser\-Sensor}, and \hyperlink{classUltrasonicSensor_a9c92da2614f15035c069c7ae9ae2899d}{Ultrasonic\-Sensor}.
+
+\hypertarget{classSensor_a53daf1760d09355a8d3846addc53bd6e}{\index{Sensor@{Sensor}!set\-Sensor\-Type@{set\-Sensor\-Type}}
+\index{set\-Sensor\-Type@{set\-Sensor\-Type}!Sensor@{Sensor}}
+\subsubsection[{set\-Sensor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sensor\-::set\-Sensor\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classSensor_a53daf1760d09355a8d3846addc53bd6e}
+
+
+Implemented in \hyperlink{classUltrasonicSensor_a0f3de9fee2a0ff99f5163b778ecfad4d}{Ultrasonic\-Sensor}, and \hyperlink{classLaserSensor_ac6b53151004470fc1aba53be913db293}{Laser\-Sensor}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Obstacle\-Avoidance/include/\hyperlink{Sensor_8h}{Sensor.\-h}\end{DoxyCompactItemize}

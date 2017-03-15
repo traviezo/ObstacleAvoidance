@@ -1,0 +1,478 @@
+\hypertarget{classLaserSensor}{\section{Laser\-Sensor Class Reference}
+\label{classLaserSensor}\index{Laser\-Sensor@{Laser\-Sensor}}
+}
+
+
+{\ttfamily \#include $<$Laser\-Sensor.\-h$>$}
+
+
+
+Inheritance diagram for Laser\-Sensor\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classLaserSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Laser\-Sensor\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classLaserSensor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLaserSensor_a1e40e17c9f636bc41f5612d09480aca4}{Laser\-Sensor} ()
+\begin{DoxyCompactList}\small\item\em Class Constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLaserSensor_a1137c622e564b5706e6f36e253c2828b}{init\-Driver} (int number\-Of\-Sensors, int gain, int max\-Range)
+\begin{DoxyCompactList}\small\item\em Initiates Laser \hyperlink{classSensor}{Sensor} Driver. \end{DoxyCompactList}\item 
+virtual std\-::vector$<$ int $>$ \hyperlink{classLaserSensor_a1660841aa809bc22abc607780bf832b0}{get\-Sensor\-Data} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the Laser \hyperlink{classSensor}{Sensor} data. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLaserSensor_a87ed0b803f91e74752a9097c594bcb0a}{generate\-Sensor\-Data} ()
+\begin{DoxyCompactList}\small\item\em Generates the Laser \hyperlink{classSensor}{Sensor} data. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLaserSensor_aa2edc4c57398799497859ab9373e9aa5}{parse\-Sensor\-Data} (std\-::vector$<$ int $>$ data)
+\begin{DoxyCompactList}\small\item\em Parses the Laser \hyperlink{classSensor}{Sensor} data vector into individual variables. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLaserSensor_ac6b53151004470fc1aba53be913db293}{set\-Sensor\-Type} ()
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{classSensor}{Sensor} type as Laser. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLaserSensor_a04cc4baee499328b9f781edf050c092e}{set\-Maximum\-Range} (int max\-Range)
+\begin{DoxyCompactList}\small\item\em Sets the maximum range of the Laser \hyperlink{classSensor}{Sensor}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLaserSensor_a79c788c37d423f350108c86666b385cb}{set\-Gain} (int gain)
+\begin{DoxyCompactList}\small\item\em Sets the gain of the Laser \hyperlink{classSensor}{Sensor}. \end{DoxyCompactList}\item 
+virtual std\-::string \hyperlink{classLaserSensor_aa94501358ead1126fe74e8ccaa5e83cb}{get\-Sensor\-Type} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the \hyperlink{classSensor}{Sensor} type\-: laser. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLaserSensor_a4ce1bdb6167453f776413bcf62669562}{set\-Number\-Of\-Sensors} (int number)
+\begin{DoxyCompactList}\small\item\em Configures the number of laser sensors to be used (4) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLaserSensor_a186eb69518339ef4ba33e8e190a39428}{set\-Sensor\-Device\-I\-D} (int number\-Of\-Devices)
+\begin{DoxyCompactList}\small\item\em Sets the device I\-Ds of the laser sensors. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLaserSensor_a7b1301e42da81092ef4b16fcec3ece62}{get\-Sensor\-Device\-I\-D} ()
+\begin{DoxyCompactList}\small\item\em Prints to the screen the device I\-Ds of the laser sensors. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classLaserSensor_a3be8d859cdab60a5e32c0855e5be928e}{get\-Time\-Stamp} ()
+\begin{DoxyCompactList}\small\item\em Prints to the screen the laser sensor readings time stamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classLaserSensor_a1e40e17c9f636bc41f5612d09480aca4}{\index{Laser\-Sensor@{Laser\-Sensor}!Laser\-Sensor@{Laser\-Sensor}}
+\index{Laser\-Sensor@{Laser\-Sensor}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{Laser\-Sensor}]{\setlength{\rightskip}{0pt plus 5cm}Laser\-Sensor\-::\-Laser\-Sensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLaserSensor_a1e40e17c9f636bc41f5612d09480aca4}
+
+
+Class Constructor. 
+
+
+\begin{DoxyCode}
+10                          \{
+11   numberOfSensors = 0;
+12   laserSensorFront = 0;
+13   laserSensorBack = 0;
+14   laserSensorLeft = 0;
+15   laserSensorRight = 0;
+16   sensorGain = 0;
+17   sensorMaximumRange = 0;
+18 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classLaserSensor_a87ed0b803f91e74752a9097c594bcb0a}{\index{Laser\-Sensor@{Laser\-Sensor}!generate\-Sensor\-Data@{generate\-Sensor\-Data}}
+\index{generate\-Sensor\-Data@{generate\-Sensor\-Data}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{generate\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Sensor\-::generate\-Sensor\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_a87ed0b803f91e74752a9097c594bcb0a}
+
+
+Generates the Laser \hyperlink{classSensor}{Sensor} data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a1cabdc10d3319abeaa8db56724fa36e5}{Sensor}.
+
+
+\begin{DoxyCode}
+53                                      \{
+54   std::random\_device rnd;
+55   std::mt19937 gen(rnd());
+56   std::uniform\_int\_distribution<> dist(1,100);
+57   \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i=0; i < numberOfSensors; i++)
+58     sensorData.push\_back(dist(gen));
+59   \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} n:sensorData)
+60     std::cout << \hyperlink{classLaserSensor_aa94501358ead1126fe74e8ccaa5e83cb}{LaserSensor::getSensorType}() << \textcolor{stringliteral}{" Sensor = "} << n << std::endl;
+61 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_a1660841aa809bc22abc607780bf832b0}{\index{Laser\-Sensor@{Laser\-Sensor}!get\-Sensor\-Data@{get\-Sensor\-Data}}
+\index{get\-Sensor\-Data@{get\-Sensor\-Data}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{get\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ int $>$ Laser\-Sensor\-::get\-Sensor\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_a1660841aa809bc22abc607780bf832b0}
+
+
+Retrieves the Laser \hyperlink{classSensor}{Sensor} data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$int$>$ vector containing 4 sensor readings 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a795dda4f99ae87b9d66c3c5a07722d1b}{Sensor}.
+
+
+\begin{DoxyCode}
+49                                           \{
+50   \textcolor{keywordflow}{return} sensorData;
+51 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_a7b1301e42da81092ef4b16fcec3ece62}{\index{Laser\-Sensor@{Laser\-Sensor}!get\-Sensor\-Device\-I\-D@{get\-Sensor\-Device\-I\-D}}
+\index{get\-Sensor\-Device\-I\-D@{get\-Sensor\-Device\-I\-D}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{get\-Sensor\-Device\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Sensor\-::get\-Sensor\-Device\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_a7b1301e42da81092ef4b16fcec3ece62}
+
+
+Prints to the screen the device I\-Ds of the laser sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_af7ff987e1f0f6b7c4acf2910212fde95}{Sensor}.
+
+
+\begin{DoxyCode}
+95                                     \{
+96   std::cout <<\textcolor{stringliteral}{"Sensor Front device ID : "} << deviceID.at(0) << std::endl;
+97   std::cout <<\textcolor{stringliteral}{"Sensor Back  device ID : "} << deviceID.at(1) << std::endl;
+98   std::cout <<\textcolor{stringliteral}{"Sensor Left  device ID : "} << deviceID.at(2) << std::endl;
+99   std::cout <<\textcolor{stringliteral}{"Sensor Right device ID : "} << deviceID.at(3) << std::endl;
+100 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_aa94501358ead1126fe74e8ccaa5e83cb}{\index{Laser\-Sensor@{Laser\-Sensor}!get\-Sensor\-Type@{get\-Sensor\-Type}}
+\index{get\-Sensor\-Type@{get\-Sensor\-Type}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{get\-Sensor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Laser\-Sensor\-::get\-Sensor\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_aa94501358ead1126fe74e8ccaa5e83cb}
+
+
+Retrieves the \hyperlink{classSensor}{Sensor} type\-: laser. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Contains the sensor type (laser) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a6cf36c37e69761711982fed5d14aeb4e}{Sensor}.
+
+
+\begin{DoxyCode}
+78                                      \{
+79   \textcolor{keywordflow}{return} sensorType;
+80 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_a3be8d859cdab60a5e32c0855e5be928e}{\index{Laser\-Sensor@{Laser\-Sensor}!get\-Time\-Stamp@{get\-Time\-Stamp}}
+\index{get\-Time\-Stamp@{get\-Time\-Stamp}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{get\-Time\-Stamp}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Sensor\-::get\-Time\-Stamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_a3be8d859cdab60a5e32c0855e5be928e}
+
+
+Prints to the screen the laser sensor readings time stamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a8c6ceb519eb8720a0e9cedd84624a7ff}{Sensor}.
+
+
+\begin{DoxyCode}
+102                                \{
+103   \textcolor{keyword}{auto} now = std::chrono::system\_clock::now();
+104   \textcolor{keyword}{auto} nowC = std::chrono::system\_clock::to\_time\_t(now);
+105   std::cout << \textcolor{stringliteral}{"Time stamp = "} << std::ctime(&nowC) << std::endl;
+106 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_a1137c622e564b5706e6f36e253c2828b}{\index{Laser\-Sensor@{Laser\-Sensor}!init\-Driver@{init\-Driver}}
+\index{init\-Driver@{init\-Driver}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{init\-Driver}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Sensor\-::init\-Driver (
+\begin{DoxyParamCaption}
+\item[{int}]{number\-Of\-Sensors, }
+\item[{int}]{gain, }
+\item[{int}]{max\-Range}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_a1137c622e564b5706e6f36e253c2828b}
+
+
+Initiates Laser \hyperlink{classSensor}{Sensor} Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\-Of\-Sensors} & sets the number of sensors in the module \\
+\hline
+{\em gain} & sets the gain of the module \\
+\hline
+{\em max\-Range} & sets the maximum range of the module \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything
+\end{DoxyReturn}
+This method executes all initialization functions for the module. 
+
+Implements \hyperlink{classSensor_a12851eb9413ee61c2d694b4168e365fd}{Sensor}.
+
+
+\begin{DoxyCode}
+20                                                                        \{
+21   \textcolor{keywordflow}{if} (std::isless(numberOfSensors,0) || std::isless(gain,0) || std::isless(maxRange,0))
+22     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative arguments are invalid"});
+23   std::cout <<\textcolor{stringliteral}{"=====================================\(\backslash\)n"};
+24   std::cout <<\textcolor{stringliteral}{"Initializing Laser Sensors..........!\(\backslash\)n"};
+25   std::cout <<\textcolor{stringliteral}{".....................................\(\backslash\)n"};
+26   \hyperlink{classLaserSensor_ac6b53151004470fc1aba53be913db293}{LaserSensor::setSensorType}();
+27   \hyperlink{classLaserSensor_a79c788c37d423f350108c86666b385cb}{LaserSensor::setGain}(gain);
+28   \hyperlink{classLaserSensor_a04cc4baee499328b9f781edf050c092e}{LaserSensor::setMaximumRange}(maxRange);
+29   \hyperlink{classLaserSensor_a186eb69518339ef4ba33e8e190a39428}{LaserSensor::setSensorDeviceID}(numberOfSensors);
+30   \hyperlink{classLaserSensor_a4ce1bdb6167453f776413bcf62669562}{LaserSensor::setNumberOfSensors}(numberOfSensors);
+31   \hyperlink{classLaserSensor_a7b1301e42da81092ef4b16fcec3ece62}{LaserSensor::getSensorDeviceID}();
+32   std::cout <<\textcolor{stringliteral}{".....................................\(\backslash\)n"};
+33 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_aa2edc4c57398799497859ab9373e9aa5}{\index{Laser\-Sensor@{Laser\-Sensor}!parse\-Sensor\-Data@{parse\-Sensor\-Data}}
+\index{parse\-Sensor\-Data@{parse\-Sensor\-Data}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{parse\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Sensor\-::parse\-Sensor\-Data (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ int $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_aa2edc4c57398799497859ab9373e9aa5}
+
+
+Parses the Laser \hyperlink{classSensor}{Sensor} data vector into individual variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & vector containing 4 integer readings \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a32f0d1754f66bdb26bbece93e05b9a44}{Sensor}.
+
+
+\begin{DoxyCode}
+62                                                      \{
+63   laserSensorFront = data.at(0);
+64   std::cout <<\textcolor{stringliteral}{"Sensor Front value = "} << laserSensorFront << std::endl;
+65   laserSensorBack  = data.at(1);
+66   std::cout <<\textcolor{stringliteral}{"Sensor Back value = "} << laserSensorBack << std::endl;   
+67   laserSensorLeft  = data.at(2);
+68   std::cout <<\textcolor{stringliteral}{"Sensor Left value = "} << laserSensorLeft << std::endl;
+69   laserSensorRight = data.at(3);
+70   std::cout <<\textcolor{stringliteral}{"Sensor Right value = "} << laserSensorRight << std::endl;
+71 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_a79c788c37d423f350108c86666b385cb}{\index{Laser\-Sensor@{Laser\-Sensor}!set\-Gain@{set\-Gain}}
+\index{set\-Gain@{set\-Gain}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{set\-Gain}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Sensor\-::set\-Gain (
+\begin{DoxyParamCaption}
+\item[{int}]{gain}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_a79c788c37d423f350108c86666b385cb}
+
+
+Sets the gain of the Laser \hyperlink{classSensor}{Sensor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gain} & sensor gain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+42                                   \{
+43   \textcolor{keywordflow}{if} (std::isless(gain,0))
+44     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative gain not allowed"});
+45   sensorGain = gain;
+46   std::cout <<\textcolor{stringliteral}{"Sensor gain : "}<<sensorGain<<std::endl;
+47 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_a04cc4baee499328b9f781edf050c092e}{\index{Laser\-Sensor@{Laser\-Sensor}!set\-Maximum\-Range@{set\-Maximum\-Range}}
+\index{set\-Maximum\-Range@{set\-Maximum\-Range}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{set\-Maximum\-Range}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Sensor\-::set\-Maximum\-Range (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Range}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_a04cc4baee499328b9f781edf050c092e}
+
+
+Sets the maximum range of the Laser \hyperlink{classSensor}{Sensor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\-Range} & maximum range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+35                                               \{
+36   \textcolor{keywordflow}{if} (std::isless(maxRange,0))
+37     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative range not allowed"});
+38   sensorMaximumRange = maxRange;
+39   std::cout <<\textcolor{stringliteral}{"Sensor Maximum range : "}<<sensorMaximumRange<<std::endl;
+40 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_a4ce1bdb6167453f776413bcf62669562}{\index{Laser\-Sensor@{Laser\-Sensor}!set\-Number\-Of\-Sensors@{set\-Number\-Of\-Sensors}}
+\index{set\-Number\-Of\-Sensors@{set\-Number\-Of\-Sensors}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{set\-Number\-Of\-Sensors}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Sensor\-::set\-Number\-Of\-Sensors (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_a4ce1bdb6167453f776413bcf62669562}
+
+
+Configures the number of laser sensors to be used (4) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & number of sensors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a5372c229e1bf77d70d48506af8abd351}{Sensor}.
+
+
+\begin{DoxyCode}
+82                                                \{
+83   \textcolor{keywordflow}{if} (std::isless(number,0))
+84     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative arguments are invalid"});
+85   numberOfSensors = number;
+86 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_a186eb69518339ef4ba33e8e190a39428}{\index{Laser\-Sensor@{Laser\-Sensor}!set\-Sensor\-Device\-I\-D@{set\-Sensor\-Device\-I\-D}}
+\index{set\-Sensor\-Device\-I\-D@{set\-Sensor\-Device\-I\-D}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{set\-Sensor\-Device\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Sensor\-::set\-Sensor\-Device\-I\-D (
+\begin{DoxyParamCaption}
+\item[{int}]{number\-Of\-Devices}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_a186eb69518339ef4ba33e8e190a39428}
+
+
+Sets the device I\-Ds of the laser sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\-Of\-Devices} & number of devices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a3a7ad3cdc0e9a5ef6f5ce684c7a0c59a}{Sensor}.
+
+
+\begin{DoxyCode}
+88                                                        \{
+89   \textcolor{keywordflow}{if} (std::isless(numberOfDevices,0))
+90     \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"Negative arguments are invalid"});
+91   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i =1; i <= numberOfDevices; i++)
+92     deviceID.push\_back((i*10)+40);
+93 \}
+\end{DoxyCode}
+\hypertarget{classLaserSensor_ac6b53151004470fc1aba53be913db293}{\index{Laser\-Sensor@{Laser\-Sensor}!set\-Sensor\-Type@{set\-Sensor\-Type}}
+\index{set\-Sensor\-Type@{set\-Sensor\-Type}!LaserSensor@{Laser\-Sensor}}
+\subsubsection[{set\-Sensor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Sensor\-::set\-Sensor\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLaserSensor_ac6b53151004470fc1aba53be913db293}
+
+
+Sets the \hyperlink{classSensor}{Sensor} type as Laser. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSensor_a53daf1760d09355a8d3846addc53bd6e}{Sensor}.
+
+
+\begin{DoxyCode}
+73                                 \{
+74   sensorType = \textcolor{stringliteral}{"Laser"};
+75   std::cout <<\textcolor{stringliteral}{"Sensor Type : "} << \hyperlink{classLaserSensor_aa94501358ead1126fe74e8ccaa5e83cb}{LaserSensor::getSensorType}() << std::endl;
+76 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Obstacle\-Avoidance/include/\hyperlink{LaserSensor_8h}{Laser\-Sensor.\-h}\item 
+Obstacle\-Avoidance/app/\hyperlink{LaserSensor_8cpp}{Laser\-Sensor.\-cpp}\end{DoxyCompactItemize}

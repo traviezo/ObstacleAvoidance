@@ -1,0 +1,8 @@
+<map id="ObstacleAvoidance/include/SensorFusion.h" name="ObstacleAvoidance/include/SensorFusion.h">
+<area shape="rect" id="node2" href="$main_8cpp.html" title="ObstacleAvoidance/app\l/main.cpp" alt="" coords="5,278,164,319"/>
+<area shape="rect" id="node3" href="$SensorFusion_8cpp.html" title="ObstacleAvoidance/app\l/SensorFusion.cpp" alt="" coords="36,97,195,138"/>
+<area shape="rect" id="node4" href="$MotorController_8h.html" title="Simulates an omnidirectional vehicle Motor Controller driver that moves around at 1 to 2 mi/h..." alt="" coords="221,97,400,138"/>
+<area shape="rect" id="node6" href="$ObstacleAvoidanceModule_8h.html" title="Module that detects and avoids obstacles in the path of omnidirectional robotic vehicle. " alt="" coords="307,187,499,229"/>
+<area shape="rect" id="node5" href="$MotorController_8cpp.html" title="ObstacleAvoidance/app\l/MotorController.cpp" alt="" coords="123,187,281,229"/>
+<area shape="rect" id="node7" href="$ObstacleAvoidanceModule_8cpp.html" title="ObstacleAvoidance/app\l/ObstacleAvoidanceModule.cpp" alt="" coords="299,278,505,319"/>
+</map>

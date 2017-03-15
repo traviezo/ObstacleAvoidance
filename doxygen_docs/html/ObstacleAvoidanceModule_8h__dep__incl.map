@@ -1,0 +1,6 @@
+<map id="ObstacleAvoidance/include/ObstacleAvoidanceModule.h" name="ObstacleAvoidance/include/ObstacleAvoidanceModule.h">
+<area shape="rect" id="node2" href="$main_8cpp.html" title="ObstacleAvoidance/app\l/main.cpp" alt="" coords="5,187,164,229"/>
+<area shape="rect" id="node3" href="$ObstacleAvoidanceModule_8cpp.html" title="ObstacleAvoidance/app\l/ObstacleAvoidanceModule.cpp" alt="" coords="37,97,243,138"/>
+<area shape="rect" id="node4" href="$MotorController_8h.html" title="Simulates an omnidirectional vehicle Motor Controller driver that moves around at 1 to 2 mi/h..." alt="" coords="267,97,447,138"/>
+<area shape="rect" id="node5" href="$MotorController_8cpp.html" title="ObstacleAvoidance/app\l/MotorController.cpp" alt="" coords="277,187,436,229"/>
+</map>

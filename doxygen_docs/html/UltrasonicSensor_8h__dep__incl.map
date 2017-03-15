@@ -1,0 +1,10 @@
+<map id="ObstacleAvoidance/include/UltrasonicSensor.h" name="ObstacleAvoidance/include/UltrasonicSensor.h">
+<area shape="rect" id="node2" href="$main_8cpp.html" title="ObstacleAvoidance/app\l/main.cpp" alt="" coords="5,369,164,410"/>
+<area shape="rect" id="node3" href="$UltrasonicSensor_8cpp.html" title="ObstacleAvoidance/app\l/UltrasonicSensor.cpp" alt="" coords="47,97,205,138"/>
+<area shape="rect" id="node4" href="$SensorFusion_8h.html" title="Module that combines the data received from ultrasonic and laser sensors into a single averaged data ..." alt="" coords="231,97,411,138"/>
+<area shape="rect" id="node5" href="$SensorFusion_8cpp.html" title="ObstacleAvoidance/app\l/SensorFusion.cpp" alt="" coords="97,187,256,229"/>
+<area shape="rect" id="node6" href="$MotorController_8h.html" title="Simulates an omnidirectional vehicle Motor Controller driver that moves around at 1 to 2 mi/h..." alt="" coords="282,187,461,229"/>
+<area shape="rect" id="node8" href="$ObstacleAvoidanceModule_8h.html" title="Module that detects and avoids obstacles in the path of omnidirectional robotic vehicle. " alt="" coords="332,278,524,319"/>
+<area shape="rect" id="node7" href="$MotorController_8cpp.html" title="ObstacleAvoidance/app\l/MotorController.cpp" alt="" coords="148,278,307,319"/>
+<area shape="rect" id="node9" href="$ObstacleAvoidanceModule_8cpp.html" title="ObstacleAvoidance/app\l/ObstacleAvoidanceModule.cpp" alt="" coords="325,369,531,410"/>
+</map>

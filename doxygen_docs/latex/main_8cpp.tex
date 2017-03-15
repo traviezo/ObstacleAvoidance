@@ -1,0 +1,85 @@
+\hypertarget{main_8cpp}{\section{Obstacle\-Avoidance/app/main.cpp File Reference}
+\label{main_8cpp}\index{Obstacle\-Avoidance/app/main.\-cpp@{Obstacle\-Avoidance/app/main.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}Ultrasonic\-Sensor.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Laser\-Sensor.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Sensor\-Fusion.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Obstacle\-Avoidance\-Module.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Motor\-Controller.\-h\char`\"{}}\\*
+Include dependency graph for main.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{main.\-cpp@{main.\-cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+14            \{
+15   \hyperlink{classMotorController}{MotorController} mCtrl;
+16   mCtrl.\hyperlink{classMotorController_a56ae5e4c44399b8afe94eb721514dd5e}{initializeMotorController}();
+17   std::cout <<\textcolor{stringliteral}{"=====================================!\(\backslash\)n"};
+18   std::cout <<\textcolor{stringliteral}{"Initialization Complete..............!\(\backslash\)n"};
+19   std::cout <<\textcolor{stringliteral}{".....................................!\(\backslash\)n"};
+20   std::cout <<\textcolor{stringliteral}{"Ready to drive.......................!\(\backslash\)n"};
+21   \textcolor{keywordtype}{int} usrInFrontSpeed = 1;
+22   mCtrl.\hyperlink{classMotorController_ab0dffd70556dbab55aa990673e6dc5f8}{moveForward}(usrInFrontSpeed);
+23   \textcolor{keywordtype}{int} usrInLeftSpeed = 1;
+24   mCtrl.\hyperlink{classMotorController_a4c3beafe5316cd08fd44845e20ec7151}{moveLeft}(usrInLeftSpeed);
+25   \textcolor{keywordtype}{int} usrInBackSpeed = 1;
+26   mCtrl.\hyperlink{classMotorController_a3ad21d7cff7b0c3c6700b2755b1df2d2}{moveBackwards}(usrInBackSpeed);
+27   \textcolor{keywordtype}{int} usrInRightSpeed = 1;
+28   mCtrl.\hyperlink{classMotorController_aa1586060f2ee0f66e83d30c897a1cdb4}{moveRight}(usrInRightSpeed);
+29   std::cout <<\textcolor{stringliteral}{".....................................!\(\backslash\)n"};
+30   std::cout <<\textcolor{stringliteral}{"Turning on Obstacle Avoidance Module.!\(\backslash\)n"};
+31   std::cout <<\textcolor{stringliteral}{".....................................!\(\backslash\)n"};
+32   \hyperlink{classUltrasonicSensor}{UltrasonicSensor} ultrSensor;
+33   ultrSensor.\hyperlink{classUltrasonicSensor_a7e35552a5e39f38202c2a8650a90f43c}{initDriver}(4,10,100);
+34   \hyperlink{classLaserSensor}{LaserSensor} lsrSensor;
+35   lsrSensor.\hyperlink{classLaserSensor_a1137c622e564b5706e6f36e253c2828b}{initDriver}(4,15,150);
+36   std::cout <<\textcolor{stringliteral}{"Reading Ultrasonic Sensor raw data...!\(\backslash\)n"};
+37   ultrSensor.\hyperlink{classUltrasonicSensor_a5587d9432d42a82d9f6f853b0aecddd3}{generateSensorData}();
+38   ultrSensor.\hyperlink{classUltrasonicSensor_ac101ee85a4d58f5bf075e18ece5776da}{getTimeStamp}();
+39   std::cout <<\textcolor{stringliteral}{"Reading Laser Sensor raw data........!\(\backslash\)n"};
+40   lsrSensor.\hyperlink{classLaserSensor_a87ed0b803f91e74752a9097c594bcb0a}{generateSensorData}();
+41   lsrSensor.\hyperlink{classLaserSensor_a3be8d859cdab60a5e32c0855e5be928e}{getTimeStamp}();
+42   std::cout <<\textcolor{stringliteral}{".....................................!\(\backslash\)n"};
+43   std::cout <<\textcolor{stringliteral}{"Parsing Ultrasonic Sensors data......!\(\backslash\)n"};
+44   ultrSensor.\hyperlink{classUltrasonicSensor_ac24cc66755a3201fc667e43d7d0a62c5}{parseSensorData}(ultrSensor.\hyperlink{classUltrasonicSensor_a4dab101931d788a031fe44db24d0c305}{getSensorData}());
+45   std::cout <<\textcolor{stringliteral}{"Parsing Laser Sensors data...........!\(\backslash\)n"};   
+46   lsrSensor.\hyperlink{classLaserSensor_aa2edc4c57398799497859ab9373e9aa5}{parseSensorData}(lsrSensor.\hyperlink{classLaserSensor_a1660841aa809bc22abc607780bf832b0}{getSensorData}());
+47   std::cout <<\textcolor{stringliteral}{"Fusing Ultrasonic and Laser data.....!\(\backslash\)n"};
+48   std::cout <<\textcolor{stringliteral}{".....................................!\(\backslash\)n"};
+49   \hyperlink{classSensorFusion}{SensorFusion} fsdSensor;
+50   fsdSensor.\hyperlink{classSensorFusion_a45b1154d5566e2a3368836b4aa5a3a4e}{fuseSensorData}(ultrSensor.\hyperlink{classUltrasonicSensor_a4dab101931d788a031fe44db24d0c305}{getSensorData}(), lsrSensor.
+      \hyperlink{classLaserSensor_a1660841aa809bc22abc607780bf832b0}{getSensorData}());
+51   fsdSensor.\hyperlink{classSensorFusion_a458c1aed280b12273476f0dd7f57f4c8}{outputFusedSensorData}();
+52   std::cout <<\textcolor{stringliteral}{".....................................!\(\backslash\)n"};
+53   \hyperlink{classObstacleAvoidance}{ObstacleAvoidance} obsAvMod;
+54   obsAvMod.\hyperlink{classObstacleAvoidance_a05040b1d9096fa315e439a0a9cd3a0e3}{detectObstacle}(fsdSensor.\hyperlink{classSensorFusion_afc393d9d590acb884b37b720653d5ab5}{getFusedSensorFwd}(),fsdSensor.
+      \hyperlink{classSensorFusion_aecba8be602ad5a5516c35ce2de0ef3cb}{getFusedSensorBack}(),fsdSensor.\hyperlink{classSensorFusion_a66d934da01cf106c27df5242e3e7394a}{getFusedSensorLeft}(),fsdSensor.
+      \hyperlink{classSensorFusion_a4b408c81cc07c3b81d3bd34ad079715f}{getFusedSensorRight}());
+55   obsAvMod.\hyperlink{classObstacleAvoidance_a646828a87a384074b80df0a0ff1320ec}{trnOnOffAvoid}(usrInFrontSpeed, usrInBackSpeed, usrInLeftSpeed, usrInRightSpeed);
+56   mCtrl.\hyperlink{classMotorController_ab0dffd70556dbab55aa990673e6dc5f8}{moveForward}(usrInFrontSpeed);
+57   mCtrl.\hyperlink{classMotorController_a4c3beafe5316cd08fd44845e20ec7151}{moveLeft}(usrInLeftSpeed);
+58   mCtrl.\hyperlink{classMotorController_a3ad21d7cff7b0c3c6700b2755b1df2d2}{moveBackwards}(usrInBackSpeed);
+59   mCtrl.\hyperlink{classMotorController_aa1586060f2ee0f66e83d30c897a1cdb4}{moveRight}(usrInRightSpeed);
+60   \textcolor{keywordflow}{return} 0;
+61 \}
+\end{DoxyCode}

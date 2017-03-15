@@ -1,0 +1,215 @@
+\hypertarget{classSensorFusion}{\section{Sensor\-Fusion Class Reference}
+\label{classSensorFusion}\index{Sensor\-Fusion@{Sensor\-Fusion}}
+}
+
+
+{\ttfamily \#include $<$Sensor\-Fusion.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSensorFusion_ad193998535aeea57d9e2bd468e37ee12}{Sensor\-Fusion} ()
+\begin{DoxyCompactList}\small\item\em Class Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classSensorFusion_a45b1154d5566e2a3368836b4aa5a3a4e}{fuse\-Sensor\-Data} (std\-::vector$<$ int $>$ udata, std\-::vector$<$ int $>$ ldata)
+\begin{DoxyCompactList}\small\item\em Fuses readings from laser and ultrasonic sensors. \end{DoxyCompactList}\item 
+int \hyperlink{classSensorFusion_afc393d9d590acb884b37b720653d5ab5}{get\-Fused\-Sensor\-Fwd} ()
+\begin{DoxyCompactList}\small\item\em Retrieves fused sensor forward reading. \end{DoxyCompactList}\item 
+int \hyperlink{classSensorFusion_aecba8be602ad5a5516c35ce2de0ef3cb}{get\-Fused\-Sensor\-Back} ()
+\begin{DoxyCompactList}\small\item\em Retrieves fused sensor back reading. \end{DoxyCompactList}\item 
+int \hyperlink{classSensorFusion_a66d934da01cf106c27df5242e3e7394a}{get\-Fused\-Sensor\-Left} ()
+\begin{DoxyCompactList}\small\item\em Retrieves fused sensor left reading. \end{DoxyCompactList}\item 
+int \hyperlink{classSensorFusion_a4b408c81cc07c3b81d3bd34ad079715f}{get\-Fused\-Sensor\-Right} ()
+\begin{DoxyCompactList}\small\item\em Retrieves fused sensor right reading. \end{DoxyCompactList}\item 
+void \hyperlink{classSensorFusion_a458c1aed280b12273476f0dd7f57f4c8}{output\-Fused\-Sensor\-Data} ()
+\begin{DoxyCompactList}\small\item\em Prints to screen all fused sensor readings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSensorFusion_ad193998535aeea57d9e2bd468e37ee12}{\index{Sensor\-Fusion@{Sensor\-Fusion}!Sensor\-Fusion@{Sensor\-Fusion}}
+\index{Sensor\-Fusion@{Sensor\-Fusion}!SensorFusion@{Sensor\-Fusion}}
+\subsubsection[{Sensor\-Fusion}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\-Fusion\-::\-Sensor\-Fusion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensorFusion_ad193998535aeea57d9e2bd468e37ee12}
+
+
+Class Constructor. 
+
+
+\begin{DoxyCode}
+10                            \{
+11   fusedSensorFwd = 0;
+12   fusedSensorBack = 0;
+13   fusedSensorLeft = 0;
+14   fusedSensorRight = 0;
+15 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSensorFusion_a45b1154d5566e2a3368836b4aa5a3a4e}{\index{Sensor\-Fusion@{Sensor\-Fusion}!fuse\-Sensor\-Data@{fuse\-Sensor\-Data}}
+\index{fuse\-Sensor\-Data@{fuse\-Sensor\-Data}!SensorFusion@{Sensor\-Fusion}}
+\subsubsection[{fuse\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\-Fusion\-::fuse\-Sensor\-Data (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ int $>$}]{udata, }
+\item[{std\-::vector$<$ int $>$}]{ldata}
+\end{DoxyParamCaption}
+)}}\label{classSensorFusion_a45b1154d5566e2a3368836b4aa5a3a4e}
+
+
+Fuses readings from laser and ultrasonic sensors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em udata} & vector containing ultrasonic readings \\
+\hline
+{\em ldata} & vector containing laser readings \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+17                                                                            \{
+18   fusedSensorFwd = (udata.at(0)+ldata.at(0))/2;
+19   fusedSensorBack = (udata.at(1)+ldata.at(1))/2;
+20   fusedSensorLeft = (udata.at(2)+ldata.at(2))/2;
+21   fusedSensorRight = (udata.at(3)+ldata.at(3))/2;
+22 \}
+\end{DoxyCode}
+\hypertarget{classSensorFusion_aecba8be602ad5a5516c35ce2de0ef3cb}{\index{Sensor\-Fusion@{Sensor\-Fusion}!get\-Fused\-Sensor\-Back@{get\-Fused\-Sensor\-Back}}
+\index{get\-Fused\-Sensor\-Back@{get\-Fused\-Sensor\-Back}!SensorFusion@{Sensor\-Fusion}}
+\subsubsection[{get\-Fused\-Sensor\-Back}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\-Fusion\-::get\-Fused\-Sensor\-Back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensorFusion_aecba8be602ad5a5516c35ce2de0ef3cb}
+
+
+Retrieves fused sensor back reading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int back sensor reading 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+28                                      \{
+29   \textcolor{keywordflow}{return} fusedSensorBack;
+30 \}
+\end{DoxyCode}
+\hypertarget{classSensorFusion_afc393d9d590acb884b37b720653d5ab5}{\index{Sensor\-Fusion@{Sensor\-Fusion}!get\-Fused\-Sensor\-Fwd@{get\-Fused\-Sensor\-Fwd}}
+\index{get\-Fused\-Sensor\-Fwd@{get\-Fused\-Sensor\-Fwd}!SensorFusion@{Sensor\-Fusion}}
+\subsubsection[{get\-Fused\-Sensor\-Fwd}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\-Fusion\-::get\-Fused\-Sensor\-Fwd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensorFusion_afc393d9d590acb884b37b720653d5ab5}
+
+
+Retrieves fused sensor forward reading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int front sensor reading 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+24                                     \{
+25   \textcolor{keywordflow}{return} fusedSensorFwd;
+26 \}
+\end{DoxyCode}
+\hypertarget{classSensorFusion_a66d934da01cf106c27df5242e3e7394a}{\index{Sensor\-Fusion@{Sensor\-Fusion}!get\-Fused\-Sensor\-Left@{get\-Fused\-Sensor\-Left}}
+\index{get\-Fused\-Sensor\-Left@{get\-Fused\-Sensor\-Left}!SensorFusion@{Sensor\-Fusion}}
+\subsubsection[{get\-Fused\-Sensor\-Left}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\-Fusion\-::get\-Fused\-Sensor\-Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensorFusion_a66d934da01cf106c27df5242e3e7394a}
+
+
+Retrieves fused sensor left reading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int left sensor reading 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+32                                      \{
+33   \textcolor{keywordflow}{return} fusedSensorLeft;
+34 \}
+\end{DoxyCode}
+\hypertarget{classSensorFusion_a4b408c81cc07c3b81d3bd34ad079715f}{\index{Sensor\-Fusion@{Sensor\-Fusion}!get\-Fused\-Sensor\-Right@{get\-Fused\-Sensor\-Right}}
+\index{get\-Fused\-Sensor\-Right@{get\-Fused\-Sensor\-Right}!SensorFusion@{Sensor\-Fusion}}
+\subsubsection[{get\-Fused\-Sensor\-Right}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\-Fusion\-::get\-Fused\-Sensor\-Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensorFusion_a4b408c81cc07c3b81d3bd34ad079715f}
+
+
+Retrieves fused sensor right reading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int right sensor reading 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+36                                       \{
+37   \textcolor{keywordflow}{return} fusedSensorRight;
+38 \}
+\end{DoxyCode}
+\hypertarget{classSensorFusion_a458c1aed280b12273476f0dd7f57f4c8}{\index{Sensor\-Fusion@{Sensor\-Fusion}!output\-Fused\-Sensor\-Data@{output\-Fused\-Sensor\-Data}}
+\index{output\-Fused\-Sensor\-Data@{output\-Fused\-Sensor\-Data}!SensorFusion@{Sensor\-Fusion}}
+\subsubsection[{output\-Fused\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\-Fusion\-::output\-Fused\-Sensor\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensorFusion_a458c1aed280b12273476f0dd7f57f4c8}
+
+
+Prints to screen all fused sensor readings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void Function does not return anything 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+40                                          \{
+41   std::cout <<\textcolor{stringliteral}{"Fused Sensor Front value = "} << fusedSensorFwd << std::endl;
+42   std::cout <<\textcolor{stringliteral}{"Fused Sensor Back value = "} << fusedSensorBack << std::endl;
+43   std::cout <<\textcolor{stringliteral}{"Fused Sensor Left value = "} << fusedSensorLeft << std::endl;
+44   std::cout <<\textcolor{stringliteral}{"Fused Sensor Right value = "} << fusedSensorRight << std::endl;
+45 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Obstacle\-Avoidance/include/\hyperlink{SensorFusion_8h}{Sensor\-Fusion.\-h}\item 
+Obstacle\-Avoidance/app/\hyperlink{SensorFusion_8cpp}{Sensor\-Fusion.\-cpp}\end{DoxyCompactItemize}
